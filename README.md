@@ -1,8 +1,7 @@
-# React + Vite
+# E-Commerce-smart-shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**The project is an e-commerce platform aimed at selling products online. The project includes a set of features and functions such as displaying products, shopping cart, purchase process, search, filtering, etc. that facilitate the electronic shopping experience for users.**
+                            
+                           
+## Project techniques:
+`React.js` | `ReduxToolkit` | `sass` | `react-icons` | `swiper` | `react-toastify` | `axios`
