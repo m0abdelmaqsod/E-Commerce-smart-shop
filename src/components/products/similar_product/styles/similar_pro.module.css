@@ -1,0 +1,445 @@
+.similar_pro {
+  width: 95%;
+  margin: 10vh auto;
+}
+.similar_pro .title_pro h3 {
+  position: relative;
+  margin-bottom: 7vh;
+  display: flex;
+  justify-content: center;
+}
+.similar_pro .title_pro h3 span {
+  width: 130px;
+  border-radius: 20px;
+  height: 3px;
+  background-color: #7FD3DF;
+  position: absolute;
+  bottom: -15px;
+}
+.similar_pro .products .mySwiperSimilar {
+  width: 100%;
+  padding: 0 30px;
+}
+.similar_pro .products .mySwiperSimilar .pro .div_img {
+  position: relative;
+}
+.similar_pro .products .mySwiperSimilar .pro .div_img img {
+  width: 100%;
+  height: 50vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.similar_pro .products .mySwiperSimilar .pro .div_img .dev_heart {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+.similar_pro .products .mySwiperSimilar .pro .div_img .dev_heart button {
+  background-color: transparent;
+  border: none;
+  margin-right: 3px;
+  font-size: 18px;
+  color: #888;
+  transition: all 0.5s;
+}
+.similar_pro .products .mySwiperSimilar .pro .div_img .dev_heart button:hover {
+  color: #7FD3DF;
+}
+.similar_pro .products .mySwiperSimilar .pro .div_img .btnCart {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  background-color: #7FD3DF;
+  width: 100%;
+  text-align: center;
+  transition: all 0.5s;
+}
+.similar_pro .products .mySwiperSimilar .pro .div_img .btnCart button {
+  background-color: transparent;
+  border: none;
+  margin-right: none;
+  font-size: 18px;
+  color: #fff;
+  transition: all 0.5s;
+  padding: 20px;
+}
+.similar_pro .products .mySwiperSimilar .pro:hover .btnCart {
+  opacity: 1;
+}
+.similar_pro .products .mySwiperSimilar .pro .pro_content {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 15px 5px;
+}
+.similar_pro .products .mySwiperSimilar .pro .pro_content .div_price {
+  position: relative;
+  height: 10vh;
+}
+.similar_pro .products .mySwiperSimilar .pro .pro_content .div_price p {
+  color: #7FD3DF;
+  font-weight: 700;
+}
+.similar_pro .products .mySwiperSimilar .pro .pro_content .div_price span {
+  position: absolute;
+  bottom: 10px;
+  font-size: 12px;
+  color: #7FD3DF;
+  text-decoration: line-through;
+}
+.similar_pro .products .mySwiperSimilar .pro .pro_content .proName_assess {
+  text-align: end;
+  justify-content: end;
+}
+.similar_pro .products .mySwiperSimilar .pro .pro_content .proName_assess .assess button {
+  background-color: transparent;
+  border: none;
+  margin-right: 3px;
+  font-size: 18px;
+  color: rgb(255, 174, 0);
+  transition: all 0.5s;
+}
+.similar_pro .products .mySwiperSimilar .pro .pro_content .proName_assess .assess button:hover {
+  color: rgb(255, 174, 0);
+}
+.similar_pro .products .mySwiperSimilar .pro .pro_content .proName_assess .assess .star {
+  color: #888;
+}
+.similar_pro .products .mySwiperSimilar .pro .pro_content .proName_assess a {
+  font-size: 17px;
+}
+.similar_pro .products .mySwiperSimilar .pro .pro_content .proName_assess a:hover {
+  color: #7FD3DF;
+}
+.similar_pro .products .mySwiperSimilar .pro .sizes {
+  display: flex;
+  justify-content: end;
+  padding-right: 15px;
+}
+.similar_pro .products .mySwiperSimilar .pro .sizes button {
+  background-color: transparent;
+  color: #000;
+  border-radius: 0;
+  border: 1px solid #7FD3DF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  transition: all 0.5s;
+  border: 1px solid #888;
+  margin-left: 5px;
+}
+.similar_pro .products .mySwiperSimilar .pro .sizes button:hover {
+  background-color: #7FD3DF;
+  color: #fff;
+}
+
+@media (max-width: 360px) {
+  .similar_pro {
+    width: 90%;
+  }
+  .similar_pro .title_pro h3 {
+    font-size: 19px;
+  }
+  .similar_pro .title_pro h3 span {
+    width: 100px;
+    height: 2px;
+  }
+  .similar_pro .products .mySwiperSimilar {
+    padding: 0 20px;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .div_img img {
+    height: 50vh;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .div_img .dev_heart {
+    position: absolute;
+    top: 10px;
+    right: -10px;
+    background-color: #fff;
+    border: 1px solid #acacac;
+    width: 30px;
+    display: grid;
+    justify-content: center;
+    border-radius: 10px;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .div_img .dev_heart button {
+    background-color: transparent;
+    border: none;
+    margin-right: 3px;
+    font-size: 18px;
+    color: #888;
+    transition: all 0.5s;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .div_img .dev_heart button:hover {
+    color: #888;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .div_img .dev_heart .addCartResponsive {
+    position: relative;
+    font-size: 20px;
+    width: 100%;
+    font-weight: 600;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .div_img .dev_heart .addCartResponsive span {
+    background-color: #7FD3DF;
+    position: absolute;
+    top: 0;
+    right: -2px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+    border-radius: 50%;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .div_img .btnCart {
+    display: none;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .pro_content {
+    padding: 15px 15px 5px;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .pro_content .div_price {
+    height: 45px;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .pro_content .div_price p {
+    font-size: 14px;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .pro_content .div_price span {
+    bottom: 0px;
+    font-size: 11px;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .pro_content .proName_assess .assess button {
+    background-color: transparent;
+    border: none;
+    margin-right: 5px;
+    font-size: 15px;
+    color: rgb(255, 174, 0);
+    transition: all 0.5s;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .pro_content .proName_assess a {
+    font-size: 15px;
+  }
+}
+@media (min-width: 360px) {
+  .similar_pro .title_pro h3 {
+    font-size: 19px;
+  }
+  .similar_pro .title_pro h3 span {
+    width: 100px;
+    height: 2px;
+  }
+  .similar_pro .products .mySwiperSimilar {
+    padding: 0 20px;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .div_img img {
+    height: 55vh;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .div_img .dev_heart {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    background-color: #fff;
+    border: 1px solid #acacac;
+    width: 30px;
+    display: grid;
+    justify-content: center;
+    border-radius: 10px;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .div_img .dev_heart button {
+    background-color: transparent;
+    border: none;
+    margin-right: 3px;
+    font-size: 18px;
+    color: #888;
+    transition: all 0.5s;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .div_img .dev_heart button:hover {
+    color: #888;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .div_img .dev_heart .addCartResponsive {
+    position: relative;
+    font-size: 20px;
+    width: 100%;
+    font-weight: 600;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .div_img .dev_heart .addCartResponsive span {
+    background-color: #7FD3DF;
+    position: absolute;
+    top: 0;
+    right: -2px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+    border-radius: 50%;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .div_img .btnCart {
+    display: none;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .pro_content {
+    padding: 15px 15px 5px;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .pro_content .div_price {
+    height: 45px;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .pro_content .div_price p {
+    font-size: 14px;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .pro_content .div_price span {
+    bottom: 0px;
+    font-size: 12px;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .pro_content .proName_assess .assess button {
+    background-color: transparent;
+    border: none;
+    margin-right: 5px;
+    font-size: 18px;
+    color: rgb(255, 174, 0);
+    transition: all 0.5s;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .pro_content .proName_assess a {
+    font-size: 17px;
+  }
+}
+@media (min-width: 768px) {
+  .similar_pro .title_pro h3 {
+    font-size: 19px;
+  }
+  .similar_pro .title_pro h3 span {
+    width: 100px;
+    height: 2px;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .pro_content .div_price {
+    height: 45px;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .pro_content .div_price p {
+    font-size: 15px;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .pro_content .div_price span {
+    font-size: 13px;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .pro_content .proName_assess .assess button {
+    background-color: transparent;
+    border: none;
+    margin-right: 5px;
+    font-size: 19px;
+    color: rgb(255, 174, 0);
+    transition: all 0.5s;
+  }
+}
+@media (min-width: 860px) {
+  .similar_pro .title_pro h3 {
+    font-size: 19px;
+  }
+  .similar_pro .title_pro h3 span {
+    width: 100px;
+    height: 2px;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .pro_content .div_price p {
+    font-size: 14px;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .pro_content .div_price span {
+    font-size: 11px;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .pro_content .proName_assess .assess button {
+    background-color: transparent;
+    border: none;
+    margin-right: 5px;
+    font-size: 16px;
+    color: rgb(255, 174, 0);
+    transition: all 0.5s;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .pro_content .proName_assess a {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  .similar_pro .title_pro h3 {
+    font-size: 19px;
+  }
+  .similar_pro .title_pro h3 span {
+    width: 100px;
+    height: 2px;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .div_img img {
+    height: 50vh;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .div_img .dev_heart {
+    right: 30px;
+    top: 5px;
+    background-color: transparent;
+    border: none;
+    width: auto;
+    display: flex;
+    border-radius: 0;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .div_img .dev_heart button {
+    background-color: transparent;
+    border: none;
+    margin-right: 0px;
+    font-size: 19px;
+    color: #888;
+    transition: all 0.5s;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .div_img .dev_heart button:hover {
+    color: #7FD3DF;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .div_img .dev_heart .addCartResponsive {
+    display: none;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .div_img .btnCart {
+    display: block;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .pro_content .div_price p {
+    font-size: 14px;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .pro_content .div_price span {
+    font-size: 11px;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .pro_content .proName_assess .assess button {
+    background-color: transparent;
+    border: none;
+    margin-right: 5px;
+    font-size: 16px;
+    color: rgb(255, 174, 0);
+    transition: all 0.5s;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .pro_content .proName_assess a {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  .similar_pro .title_pro h3 {
+    font-size: 19px;
+  }
+  .similar_pro .title_pro h3 span {
+    width: 100px;
+    height: 2px;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .div_img .dev_heart {
+    right: 15px;
+    top: 15px;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .pro_content .div_price p {
+    font-size: 14px;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .pro_content .div_price span {
+    font-size: 12px;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .pro_content .proName_assess .assess button {
+    background-color: transparent;
+    border: none;
+    margin-right: 3px;
+    font-size: 18px;
+    color: rgb(255, 174, 0);
+    transition: all 0.5s;
+  }
+  .similar_pro .products .mySwiperSimilar .pro .pro_content .proName_assess a {
+    font-size: 17px;
+  }
+}/*# sourceMappingURL=similar_pro.module.css.map */

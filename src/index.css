@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+}
+
+::-webkit-scrollbar{
+  background-color: #e2e2e2;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color:  #7fd2df7a;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+::-webkit-scrollbar-thumb:hover{
+background-color:  #7FD3DF;
+}

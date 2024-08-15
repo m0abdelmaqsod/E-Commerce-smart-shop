@@ -1,0 +1,207 @@
+@use '../../../Home/latestPro/styles/buttonIcons' as *;
+
+
+
+.comment {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5%;
+    width: 80%;
+    margin: auto;
+
+
+    form {
+        text-align: end;
+        margin: 5vh 0;
+
+        h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .evaluation {
+            display: flex;
+            justify-content: end;
+            margin-bottom: 5vh;
+
+            h6 {
+                font-size: 18px;
+                margin: 0;
+            }
+
+            .assess {
+                margin: 0 10px 0 0;
+
+                button {
+                    @include btnIcon (transparent, none, 3px, 15px, rgb(255, 174, 0));
+
+                    &:hover {
+                        color: rgb(255, 174, 0);
+                    }
+                }
+
+                .star {
+                    color: #888;
+                }
+            }
+        }
+
+        input {
+            text-align: end;
+            outline: none;
+            border: 1px solid #cccccc;
+            padding: 10px 20px;
+            width: 100%;
+            border-radius: 50px;
+            margin: 10px 0;
+
+            &::placeholder {
+                color: #888;
+            }
+        }
+
+        textarea {
+            outline: none;
+            text-align: end;
+            padding: 10px 20px;
+            border: 1px solid #cccccc;
+            border-radius: 20px;
+            width: 100%;
+            height: 20vh;
+
+            &::placeholder {
+                color: #888;
+            }
+        }
+
+        .name_email {
+            display: flex;
+            justify-content: space-between;
+
+            input {
+                width: 47%;
+            }
+        }
+
+
+        //  === start of error massing === //
+        .errorMassing {
+            color: #CB1F27;
+            font-size: 12px;
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            margin: 5px 0;
+
+            span {
+                margin-right: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: 700;
+                margin-left: 10px;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                border: 1px solid #CB1F27;
+            }
+        }
+
+        .div_errorMassing {
+            display: flex;
+        }
+
+        .btn_addComment {
+            margin-top: 10px;
+            background-color: #7FD3DF;
+            width: 120px;
+            padding: 8px;
+            border-radius: 50px;
+        }
+    }
+
+
+
+    .comAll {
+        text-align: end;
+
+        h3 {
+            margin: 5vh 0;
+        }
+
+
+        .comScroll {
+            .com {
+                display: flex;
+                justify-content: end;
+                margin-bottom: 20px;
+
+                .infoCom {
+                    margin-right: 20px;
+
+                    h3 {
+                        font-size: 18px;
+                        margin: 0 0 10px;
+                    }
+
+                    .desc_comp {
+                        font-size: 17px;
+                    }
+
+                    .assess {
+                        margin: 0;
+
+                        button {
+                            @include btnIcon (transparent, none, 3px, 18px, rgb(255, 174, 0));
+
+                            &:hover {
+                                color: rgb(255, 174, 0);
+                            }
+                        }
+
+                        .star {
+                            color: #888;
+                        }
+                    }
+
+                    .name_dt {
+                        display: flex;
+                        justify-content: end;
+
+                        p {
+                            font-size: 16px;
+
+                            &:nth-child(1) {
+                                margin-right: 40px;
+                                color: #4d4d4d;
+                            }
+                        }
+                    }
+                }
+
+                img {
+                    width: 80px;
+                    height: 20vh;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        .ShowLessComments,.ViewMoreComments {
+            background-color: transparent;
+            text-decoration: underline;
+            font-size: 16px;
+            display: inline-block;
+            transition: all 0.5s;
+            &:hover{
+                color: #7FD3DF;
+
+            }
+        }
+
+        .ViewComments {
+            display: none;
+        }
+    }
+}

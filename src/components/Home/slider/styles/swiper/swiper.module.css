@@ -1,0 +1,23 @@
+.swiPerButton {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+.swiPerButton button {
+  background-color: #fff;
+  color: #7FD3DF;
+  border-radius: 50%;
+  border: 1px solid #7FD3DF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  transition: all 0.5s;
+  margin: 0 45px;
+}
+.swiPerButton button:hover {
+  background-color: #7FD3DF;
+  color: #fff;
+}/*# sourceMappingURL=swiper.module.css.map */

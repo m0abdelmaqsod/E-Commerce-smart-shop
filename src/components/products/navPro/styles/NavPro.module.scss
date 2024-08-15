@@ -1,0 +1,417 @@
+.navPro {
+    background-color: #93CADE0D;
+    padding: 10px;
+    border: 1px solid #44444433;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+
+    h6 {
+        font-size: 14px;
+    }
+
+    .filter_price {
+        display: flex;
+        align-items: center;
+
+        form {
+            position: relative;
+            text-align: end;
+
+            select {
+                background-color: #7fd3df;
+                color: #fff;
+                width: 150px;
+                border-radius: 10px;
+                text-align: center;
+                padding: 10px 25px;
+                border: 0;
+                outline: none;
+
+                option {
+                    background-color: #fff;
+                    color: #000;
+                }
+            }
+        }
+
+        label {
+            margin: 0 0 0 15px;
+            font-weight: 400;
+        }
+    }
+
+    .filter_number {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+
+        .div_filNum {
+            display: flex;
+
+            button {
+                transition: all 0.5s;
+                margin: 0 10px;
+                color: #c4c4c4;
+                background-color: transparent;
+            }
+
+            .active {
+                color: #7fd3df;
+                font-weight: bolder;
+            }
+        }
+
+        h6 {
+            margin: 0 0 0 15px;
+        }
+    }
+
+
+
+
+
+    .filter_all_div {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        transition: all 0.5s;
+
+
+        .icon_filBig,
+        .btnActiveIcon {
+            background-color: transparent;
+            position: relative;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+
+            span {
+                background-color: #000;
+                width: 20px;
+                height: 2px;
+                border-radius: 10px;
+                position: absolute;
+                top: 23px;
+                right: 10px;
+
+                &:nth-child(1) {
+                    width: 10px;
+                    top: 17px;
+                }
+            }
+        }
+
+
+
+        .icon_filSmall,
+        .btnActiveIcon {
+            background-color: transparent;
+            font-size: 20px;
+            display: flex;
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            margin: 0;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
+
+
+        .btnActiveIcon {
+            background-color: #7fd3df;
+            color: #fff;
+
+            span {
+                background-color: #fff;
+            }
+        }
+
+        h6 {
+            margin: 0 0 0 15px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Responsive
+@media (max-width:360px) {
+    .navPro {
+        border-radius: 8px;
+        grid-template-columns: repeat(2, 1fr);
+
+        h6 {
+            font-size: 13px;
+        }
+
+        .filter_price {
+            display: none;
+        }
+
+        .filter_number {
+            .div_filNum {
+                button {
+                    margin: 0 0 0 15px;
+                }
+            }
+
+            h6 {
+                margin: 0 0 0 15px;
+            }
+        }
+
+        .filter_all_div {
+            display: none;
+        }
+    }
+
+}
+
+
+
+
+
+
+@media (min-width:360px) {
+    .navPro {
+        border-radius: 8px;
+        grid-template-columns: repeat(2, 1fr);
+
+        h6 {
+            font-size: 15px;
+        }
+
+        .filter_price {
+            display: none;
+        }
+
+        .filter_number {
+            .div_filNum {
+                button {
+                    margin: 0 0 0 20px;
+                }
+            }
+
+            h6 {
+                margin: 0 0 0 15px;
+            }
+        }
+
+        .filter_all_div {
+            display: none;
+        }
+    }
+}
+
+
+
+
+
+
+
+@media (min-width:768px) {
+    .navPro {
+        border-radius: 8px;
+        grid-template-columns: repeat(2, 1fr) 15%;
+
+        h6 {
+            font-size: 13px;
+        }
+
+
+
+
+        .filter_price {
+            display: none;
+        }
+
+
+
+
+
+
+        .filter_number {
+            justify-content: flex-start;
+
+            .div_filNum {
+                button {
+                    margin: 0 0 0 15px;
+                }
+            }
+
+            h6 {
+                margin: 0 0 0 15px;
+            }
+        }
+
+        .filter_all_div {
+            display: flex;
+            justify-content: center;
+
+
+            h6 {
+                margin: 0 0 0 10px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+@media (min-width:860px) {
+    .navPro {
+        border-radius: 8px;
+        grid-template-columns: repeat(2, 1fr) 15%;
+
+        h6 {
+            font-size: 13px;
+        }
+
+        .filter_price {
+            display: none;
+        }
+
+        .filter_number {
+            justify-content: flex-start;
+
+            .div_filNum {
+                button {
+                    margin: 0 0 0 20px;
+                }
+            }
+
+            h6 {
+                margin: 0 0 0 20px;
+            }
+        }
+
+        .filter_all_div {
+            display: flex;
+
+            h6 {
+                margin: 0 0 0 20px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+@media (min-width:1024px) {
+
+    .navPro {
+        grid-template-columns: repeat(3, 1fr);
+
+        h6 {
+            font-size: 13px;
+        }
+
+        .filter_price {
+            display: flex;
+            form {
+                select {
+                    width: 121px;
+                }
+            }
+
+            label {
+                margin: 0 0 0 5px;
+                font-size: 13px;
+            }
+        }
+
+        .filter_number {
+            justify-content: flex-start;
+            .div_filNum {
+                button {
+                    margin: 0 0 0 15px;
+                    font-size: 16px;
+                }
+            }
+
+            h6 {
+                margin: 0 0 0 15px;
+            }
+        }
+
+        .filter_all_div {
+            justify-content: end;
+
+            h6 {
+                margin: 0 0 0 15px;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+@media (min-width:1200px) {
+    .navPro {
+        .filter_price {
+            display: flex;
+
+            form {
+                select {
+                    width: 150px;
+                }
+            }
+
+            label {
+                margin: 0 0 0 20px;
+                font-size: 16px;
+            }
+        }
+
+        .filter_number {
+            justify-content: center;
+            .div_filNum {
+                button {
+                    margin: 0 0 0 20px;
+                    font-size: 17px;
+
+                }
+            }
+
+            h6 {
+                margin: 0 0 0 20px;
+            }
+        }
+
+        .filter_all_div {
+            justify-content: end;
+
+            h6 {
+                margin: 0 0 0 20px;
+            }
+        }
+    }
+}

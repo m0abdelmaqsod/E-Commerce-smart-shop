@@ -1,0 +1,12 @@
+@mixin btn ($color , $bg, $br, $w, $h) {
+    background-color: $bg;
+    color: $color;
+    border-radius: $br;
+    border: 1px solid #7FD3DF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $w;
+    height: $h;
+    transition: all 0.5s;
+}

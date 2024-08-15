@@ -1,0 +1,138 @@
+@mixin active {
+    color: #7FD3DF;
+    position: relative;
+
+    &::after {
+        content: "";
+        background-color: #7FD3DF;
+        width: 7px;
+        height: 2px;
+        position: absolute;
+        top: 12px;
+        border-radius: 30px;
+        right: -12px;
+        transform: rotate(50deg);
+        animation-name: succuss_after;
+        animation-duration: 0.5s;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-color: #7FD3DF;
+        width: 14px;
+        height: 2px;
+        border-radius: 30px;
+        top: 9px;
+        right: -23px;
+        transform: rotate(-45deg);
+        animation-name: succuss_before;
+        animation-duration: 0.5s;
+    }
+
+    @keyframes succuss_after {
+        0% {
+            right: 0;
+        }
+
+        40% {
+            right: -16px;
+        }
+
+        80% {
+            right: -9px;
+        }
+
+        100% {
+            right: -12px;
+        }
+    }
+
+    @keyframes succuss_before {
+        0% {
+            right: -12px;
+        }
+
+        40% {
+            right: -26px;
+        }
+
+        80% {
+            right: -20px;
+        }
+
+        100% {
+            right: -23px;
+        }
+    }
+
+}
+// .active_defult {
+//     color: #7FD3DF;
+//     position: relative;
+
+
+//     &::after {
+//         content: "";
+//         background-color: #7FD3DF;
+//         width: 7px;
+//         height: 2px;
+//         position: absolute;
+//         top: 12px;
+//         border-radius: 30px;
+//         right: -12px;
+//         transform: rotate(50deg);
+//         animation-name: succuss_after;
+//         animation-duration: 0.5s;
+//     }
+
+//     &::before {
+//         content: "";
+//         position: absolute;
+//         background-color: #7FD3DF;
+//         width: 14px;
+//         height: 2px;
+//         border-radius: 30px;
+//         top: 9px;
+//         right: -23px;
+//         transform: rotate(-45deg);
+//         animation-name: succuss_before;
+//         animation-duration: 0.5s;
+//     }
+
+//     @keyframes succuss_after {
+//         0% {
+//             right: 0;
+//         }
+
+//         40% {
+//             right: -16px;
+//         }
+
+//         80% {
+//             right: -9px;
+//         }
+
+//         100% {
+//             right: -12px;
+//         }
+//     }
+
+//     @keyframes succuss_before {
+//         0% {
+//             right: -12px;
+//         }
+
+//         40% {
+//             right: -26px;
+//         }
+
+//         80% {
+//             right: -20px;
+//         }
+
+//         100% {
+//             right: -23px;
+//         }
+//     }
+// }

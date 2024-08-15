@@ -1,0 +1,380 @@
+.user,
+.name {
+  font-family: "El Messiri", sans-serif;
+  background-color: #fff;
+  position: absolute;
+  top: 16vh;
+  left: 50px;
+  max-width: 500px;
+  text-align: center;
+  border-radius: 10px;
+  transition: all 0.5s;
+  box-shadow: 0 0 5px rgba(64, 83, 83, 0.3960784314);
+  z-index: 10;
+}
+.user::after,
+.name::after {
+  content: "";
+  position: absolute;
+  box-shadow: -1px -1px 1px rgba(64, 83, 83, 0.2274509804);
+  top: -7px;
+  left: 153px;
+  transform: rotateZ(45deg);
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+}
+.user .user_signed_in,
+.name .user_signed_in {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 330px;
+  padding: 30px 0;
+}
+.user .user_signed_in .div_user,
+.name .user_signed_in .div_user {
+  display: flex;
+  justify-content: end;
+  padding: 0 10px 0 0;
+  position: relative;
+}
+.user .user_signed_in .div_user .name_and_email,
+.name .user_signed_in .div_user .name_and_email {
+  text-align: end;
+  margin-right: 10px;
+}
+.user .user_signed_in .div_user .name_and_email h3,
+.name .user_signed_in .div_user .name_and_email h3 {
+  font-weight: bolder;
+  font-size: 20px;
+  margin: 0;
+}
+.user .user_signed_in .div_user .name_and_email p,
+.name .user_signed_in .div_user .name_and_email p {
+  color: #888;
+  font-size: 17px;
+}
+.user .user_signed_in .div_user .border,
+.name .user_signed_in .div_user .border {
+  background-color: #888;
+  width: 90%;
+  height: 1px;
+  text-align: end;
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+}
+.user .user_signed_in .div_info,
+.name .user_signed_in .div_info {
+  padding: 15px 20px 0;
+}
+.user .user_signed_in .div_info a,
+.name .user_signed_in .div_info a {
+  display: flex;
+  margin: auto;
+  justify-content: end;
+  color: #7FD3DF;
+  padding: 10px 25px 0;
+  font-size: 22px;
+}
+.user .user_signed_in .div_info a p,
+.name .user_signed_in .div_info a p {
+  margin-right: 10px;
+}
+.user .visitor,
+.name .visitor {
+  padding: 30px 20px;
+  width: 300px;
+}
+.user .visitor a,
+.name .visitor a {
+  display: flex;
+  margin: auto;
+  justify-content: end;
+  color: #7FD3DF;
+  padding: 10px 25px 0;
+  font-size: 22px;
+}
+.user .visitor a p,
+.name .visitor a p {
+  margin-right: 10px;
+}
+
+@media (max-width: 360px) {
+  .user,
+  .name {
+    top: 12vh;
+    left: 14px;
+  }
+  .user::after,
+  .name::after {
+    content: "";
+    left: 71px;
+    width: 13px;
+    height: 13px;
+  }
+  .user .user_signed_in,
+  .name .user_signed_in {
+    width: 240px;
+    padding: 15px 0;
+  }
+  .user .user_signed_in .div_user .name_and_email h3,
+  .name .user_signed_in .div_user .name_and_email h3 {
+    font-size: 16px;
+  }
+  .user .user_signed_in .div_user .name_and_email p,
+  .name .user_signed_in .div_user .name_and_email p {
+    font-size: 11px;
+    margin: 3px 0 10px;
+  }
+  .user .user_signed_in .div_user .div_img,
+  .name .user_signed_in .div_user .div_img {
+    width: 15%;
+  }
+  .user .user_signed_in .div_user .div_img img,
+  .name .user_signed_in .div_user .div_img img {
+    width: 100%;
+  }
+  .user .user_signed_in .div_info,
+  .name .user_signed_in .div_info {
+    padding: 5px 0px 0;
+  }
+  .user .user_signed_in .div_info a,
+  .name .user_signed_in .div_info a {
+    padding: 10px 10px 0;
+    font-size: 16px;
+  }
+  .user .user_signed_in .div_info a p,
+  .name .user_signed_in .div_info a p {
+    margin-right: 10px;
+  }
+  .user .visitor,
+  .name .visitor {
+    padding: 10px 0;
+    width: 180px;
+  }
+  .user .visitor a,
+  .name .visitor a {
+    display: flex;
+    margin: auto;
+    justify-content: end;
+    color: #7FD3DF;
+    padding: 10px 15px 0;
+    font-size: 16px;
+  }
+  .user .visitor a p,
+  .name .visitor a p {
+    margin-right: 10px;
+    margin-bottom: 5px;
+  }
+}
+@media (min-width: 360px) {
+  .user,
+  .name {
+    top: 12vh;
+    left: 14px;
+  }
+  .user::after,
+  .name::after {
+    content: "";
+    left: 73px;
+    width: 13px;
+    height: 13px;
+  }
+  .user .user_signed_in,
+  .name .user_signed_in {
+    width: 240px;
+    padding: 15px 0;
+  }
+  .user .user_signed_in .div_user .name_and_email h3,
+  .name .user_signed_in .div_user .name_and_email h3 {
+    font-size: 16px;
+  }
+  .user .user_signed_in .div_user .name_and_email p,
+  .name .user_signed_in .div_user .name_and_email p {
+    font-size: 12px;
+    margin: 3px 0 10px;
+  }
+  .user .user_signed_in .div_user .div_img,
+  .name .user_signed_in .div_user .div_img {
+    width: 16%;
+  }
+  .user .user_signed_in .div_user .div_img img,
+  .name .user_signed_in .div_user .div_img img {
+    width: 100%;
+  }
+  .user .user_signed_in .div_info,
+  .name .user_signed_in .div_info {
+    padding: 5px 0px 0;
+  }
+  .user .user_signed_in .div_info a,
+  .name .user_signed_in .div_info a {
+    padding: 10px 10px 0;
+    font-size: 16px;
+  }
+  .user .user_signed_in .div_info a p,
+  .name .user_signed_in .div_info a p {
+    margin-right: 10px;
+  }
+  .user .visitor,
+  .name .visitor {
+    padding: 10px 0;
+    width: 180px;
+  }
+  .user .visitor a,
+  .name .visitor a {
+    padding: 10px 15px 0;
+    font-size: 16px;
+  }
+  .user .visitor a p,
+  .name .visitor a p {
+    margin-right: 10px;
+    margin-bottom: 5px;
+  }
+}
+@media (min-width: 768px) {
+  .user,
+  .name {
+    top: 16vh;
+    left: 33px;
+  }
+  .user::after,
+  .name::after {
+    content: "";
+    left: 73px;
+  }
+  .user .user_signed_in .div_user .name_and_email h3,
+  .name .user_signed_in .div_user .name_and_email h3 {
+    font-size: 17px;
+  }
+  .user .user_signed_in .div_user .name_and_email p,
+  .name .user_signed_in .div_user .name_and_email p {
+    font-size: 12px;
+    margin: 3px 0 10px;
+  }
+  .user .user_signed_in .div_user .div_img,
+  .name .user_signed_in .div_user .div_img {
+    width: 17%;
+  }
+  .user .user_signed_in .div_info a,
+  .name .user_signed_in .div_info a {
+    font-size: 17px;
+  }
+  .user .visitor,
+  .name .visitor {
+    width: 190px;
+  }
+  .user .visitor a,
+  .name .visitor a {
+    padding: 10px 10px 0;
+    font-size: 17px;
+  }
+}
+@media (min-width: 860px) {
+  .user,
+  .name {
+    left: 38px;
+  }
+  .user .user_signed_in,
+  .name .user_signed_in {
+    width: 260px;
+  }
+  .user .user_signed_in .div_user .name_and_email p,
+  .name .user_signed_in .div_user .name_and_email p {
+    font-size: 13px;
+  }
+  .user .visitor,
+  .name .visitor {
+    width: 200px;
+  }
+  .user .visitor a,
+  .name .visitor a {
+    padding: 10px 10px 0;
+    font-size: 17px;
+  }
+}
+@media (min-width: 1024px) {
+  .user,
+  .name {
+    top: 17vh;
+    left: 50px;
+  }
+  .user::after,
+  .name::after {
+    content: "";
+    left: 120px;
+  }
+  .user .user_signed_in,
+  .name .user_signed_in {
+    width: 280px;
+  }
+  .user .user_signed_in .div_user .name_and_email h3,
+  .name .user_signed_in .div_user .name_and_email h3 {
+    font-size: 18px;
+  }
+  .user .user_signed_in .div_user .name_and_email p,
+  .name .user_signed_in .div_user .name_and_email p {
+    font-size: 14px;
+    margin: 3px 0 12px;
+  }
+  .user .user_signed_in .div_user .div_img,
+  .name .user_signed_in .div_user .div_img {
+    width: 18%;
+  }
+  .user .user_signed_in .div_info a,
+  .name .user_signed_in .div_info a {
+    font-size: 17px;
+  }
+  .user .visitor,
+  .name .visitor {
+    width: 210px;
+  }
+  .user .visitor a,
+  .name .visitor a {
+    padding: 10px 13px 0;
+    font-size: 18px;
+  }
+}
+@media (min-width: 1200px) {
+  .user,
+  .name {
+    top: 13vh;
+    left: 50px;
+  }
+  .user::after,
+  .name::after {
+    content: "";
+    left: 153px;
+  }
+  .user .user_signed_in,
+  .name .user_signed_in {
+    width: 330px;
+  }
+  .user .user_signed_in .div_user .name_and_email h3,
+  .name .user_signed_in .div_user .name_and_email h3 {
+    font-size: 19px;
+  }
+  .user .user_signed_in .div_user .name_and_email p,
+  .name .user_signed_in .div_user .name_and_email p {
+    font-size: 16px;
+    margin: 3px 0 12px;
+  }
+  .user .user_signed_in .div_user .div_img,
+  .name .user_signed_in .div_user .div_img {
+    width: 17%;
+  }
+  .user .user_signed_in .div_info a,
+  .name .user_signed_in .div_info a {
+    font-size: 18px;
+  }
+  .user .visitor,
+  .name .visitor {
+    width: 280px;
+    padding: 20px 10px;
+  }
+  .user .visitor a,
+  .name .visitor a {
+    padding: 10px;
+    font-size: 19px;
+  }
+}/*# sourceMappingURL=user.module.css.map */

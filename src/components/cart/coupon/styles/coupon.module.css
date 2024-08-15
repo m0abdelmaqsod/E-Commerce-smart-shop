@@ -1,0 +1,136 @@
+.coupon {
+  background-color: #fff;
+  width: 70%;
+  padding: 20px;
+  box-shadow: 0px 0px 10px #888;
+  text-align: end;
+}
+.coupon h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px 0;
+}
+.coupon p {
+  color: #888;
+  font-size: 12px;
+}
+.coupon form {
+  display: flex;
+  justify-content: end;
+}
+.coupon form input {
+  width: 100px;
+  margin-left: 20px;
+  outline: none;
+  border: 1px solid #000;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+}
+.coupon form input::-moz-placeholder {
+  color: #888;
+}
+.coupon form input::placeholder {
+  color: #888;
+}
+.coupon form .btnCoupon {
+  background-color: #7FD3DF;
+  color: #fff;
+  border: 0;
+  width: 100px;
+  border-radius: 5px;
+}
+.coupon form textarea {
+  width: 100%;
+  height: 15vh;
+  padding: 10px 30px;
+  margin-bottom: 10px;
+  text-align: end;
+}
+.coupon form textarea::-moz-placeholder {
+  color: #888;
+}
+.coupon form textarea::placeholder {
+  color: #888;
+}
+.coupon .tootleAll {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.coupon .inf {
+  color: #000;
+  font-weight: 500;
+}
+.coupon .btn_update_paying {
+  display: flex;
+  justify-content: space-between;
+}
+.coupon .btn_update_paying button {
+  border-radius: 8px;
+  padding: 10px 20px;
+  background-color: #7FD3DF;
+  color: #fff;
+}
+
+@media (max-width: 360px) {
+  .coupon {
+    width: 100%;
+  }
+  .coupon form textarea {
+    height: 20vh;
+    padding: 10px 20px;
+  }
+}
+@media (min-width: 360px) {
+  .coupon {
+    width: 100%;
+  }
+  .coupon form textarea {
+    height: 20vh;
+    padding: 10px 20px;
+    outline: none;
+  }
+}
+@media (min-width: 768px) {
+  .coupon {
+    width: 100%;
+  }
+  .coupon h3 {
+    font-size: 22px;
+  }
+  .coupon p {
+    font-size: 15px;
+  }
+  .coupon form textarea {
+    height: 25vh;
+  }
+}
+@media (min-width: 1024px) {
+  .coupon {
+    width: 85%;
+  }
+  .coupon h3 {
+    font-size: 20px;
+  }
+  .coupon p {
+    font-size: 13px;
+  }
+  .coupon form textarea {
+    height: 18vh;
+  }
+}
+@media (min-width: 1200px) {
+  .coupon {
+    width: 70%;
+  }
+  .coupon h3 {
+    font-size: 20px;
+  }
+  .coupon p {
+    font-size: 12px;
+  }
+  .coupon form textarea {
+    height: 15vh;
+  }
+}/*# sourceMappingURL=coupon.module.css.map */

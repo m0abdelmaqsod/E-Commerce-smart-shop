@@ -1,0 +1,281 @@
+@use '../../../Home/slider/styles/button' as *; 
+
+.footer {
+    background-color: #54A4AF;
+    .div_footer {
+        width: 80%;
+        margin: auto;
+        padding-top: 20px;
+
+        .links {
+            text-align: center;
+
+            ul {
+                display: flex;
+                justify-content: center;
+
+                li {
+                    margin: 0 0 0 15px;
+
+                    a {
+                        color: #fff;
+                        font-weight: 400;
+
+                    }
+                }
+            }
+        }
+
+
+        .icons_media {
+
+            ul {
+                display: flex;
+                justify-content: center;
+
+                li {
+                    margin: 0 25px 0 0;
+
+                    button {
+                        @include btn (#fff, 'transparent', 50%, 40px, 40px);
+                        font-size: 20px;
+                        border: none;
+                    }
+
+                    .bg_w {
+                        background-color: #2AB318;
+                    }
+
+                    .bg_y {
+                        background-color: red;
+                    }
+
+                    .bg_f {
+                        background-color: blue;
+                    }
+
+                    .bg_t {
+                        background-color: #1D9BF0;
+                    }
+                }
+            }
+
+            p {
+                text-align: center;
+                color: #fff;
+                font-size: 20px;
+                font-weight: bolder;
+            }
+        }
+
+        .rights {
+            padding: 15px 0 10px;
+
+            p {
+                text-align: center;
+                color: #fff;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Rresponsiv  
+
+@media (max-width:360px) {
+    .footer {
+        .div_footer {
+            width: 90%;
+            padding-top: 30px;
+
+            .links {
+                ul {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    row-gap: 3vh;
+                    padding: 0;
+                }
+            }
+
+
+            .icons_media {
+                ul {
+                    display: flex;
+                    justify-content: center;
+
+                    li {
+                        margin: 10px 25px 0 0;
+                    }
+                }
+
+                p {
+                    color: #fff;
+                    font-size: 20px;
+                    font-weight: bolder;
+                }
+            }
+
+            .rights {
+                padding: 15px 0 10px;
+
+                p {
+                    text-align: center;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media (min-width:360px) {
+    .footer {
+        .div_footer {
+            width: 90%;
+            padding-top: 30px;
+
+            .links {
+                ul {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    row-gap: 3vh;
+                    padding: 0;
+                }
+            }
+
+
+            .icons_media {
+                ul {
+                    display: flex;
+                    justify-content: center;
+
+                    li {
+                        margin: 10px 25px 0 0;
+                    }
+                }
+
+                p {
+                    color: #fff;
+                    font-size: 20px;
+                    font-weight: bolder;
+                }
+            }
+
+            .rights {
+                padding: 15px 0 10px;
+
+                p {
+                    text-align: center;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:768px) {
+    .footer {
+        .div_footer {
+            width: 85%;
+
+            .links {
+                ul {
+                    grid-template-columns: repeat(4, 1fr);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:860px) {
+    .footer {
+        .div_footer {
+            width: 80%;
+            padding-top: 20px;
+
+            .links {
+                ul {
+                    display: flex;
+                    justify-content: center;
+
+                    li {
+                        margin: 0 0 0 15px;
+
+                        a {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+
+            .icons_media {
+                ul {
+                    display: flex;
+                    justify-content: center;
+
+                    li {
+                        margin: 0 25px 0 0;
+                    }
+                }
+            }
+        }
+    }
+}

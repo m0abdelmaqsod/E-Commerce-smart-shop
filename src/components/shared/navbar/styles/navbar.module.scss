@@ -1,0 +1,575 @@
+* {
+    font-family: 'Tajawal', sans-serif;
+}
+
+.navbar {
+    padding: 8vh 0 15px 0;
+    background-color: #f7fafc;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    box-shadow: 0 0 5px #00000021;
+
+    .nav {
+        width: 80%;
+        margin: auto;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(3, 1fr);
+
+
+        .icons_nav {
+            button {
+                background-color: transparent;
+                margin-right: 15px;
+                font-size: 18px;
+            }
+
+
+            .namber_cart {
+                position: relative;
+
+                span {
+                    background-color: #7FD3DF;
+                    position: absolute;
+                    top: -4px;
+                    right: -7px;
+                    border-radius: 50%;
+                    width: 15px;
+                    height: 15px;
+                    font-size: 11px;
+                    color: #fff;
+                }
+            }
+        }
+
+
+        .pages_and_logo {
+            display: flex;
+            grid-column: 2/4;
+            justify-content: end;
+            align-items: center;
+
+            .link_pages {
+                width: 100%;
+                background-color: red;
+                display: flex;
+                justify-content: end;
+
+                li {
+                    margin: 0 0 0 15px;
+
+                    a {
+                        font-weight: 400;
+                        // text-align: center;
+                    }
+                }
+
+                .activeNav {
+                    color: #7FD3DF;
+                    font-weight: 700;
+                }
+            }
+
+
+
+            .logo {
+                margin: 0 0 0 30px;
+            }
+
+            .toogle_responsiv {
+                display: none;
+            }
+        }
+    }
+}
+
+
+
+
+
+// ===  start of search === //
+
+.search,
+.closeSearch {
+    background: #93CADE;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 0vh;
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: 10;
+
+    button {
+        background-color: transparent;
+        border: 0;
+        font-size: 20px;
+        position: absolute;
+        top: 30px;
+        right: 80px;
+        color: #fff;
+
+        &:hover {
+            text-shadow: 0 0 6px red;
+        }
+    }
+
+
+    .que_and_form {
+        width: 60%;
+        margin: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        p {
+            text-align: end;
+            margin-bottom: 10px;
+            font-weight: bolder;
+            color: #fff;
+        }
+
+        form {
+            width: 100%;
+            text-align: end;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #fff;
+
+            label {
+                color: #fff;
+            }
+
+            input {
+                padding: 10px 10px 0 20px;
+                width: 98%;
+                outline: none;
+                border: 0;
+                color: #fff;
+                background-color: transparent;
+
+                &::placeholder {
+                    text-align: end;
+                    font-weight: bold;
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+
+.closeSearch {
+    height: 40vh;
+}
+
+// === end search === //
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Responsive
+@media (max-width:360px) {
+
+    .navbar {
+        padding: 4vh 0 10px 0;
+
+        .nav {
+            width: 90%;
+            grid-template-columns: repeat(2, 1fr);
+
+
+            .icons_nav {
+                .namber_cart {
+                    span {
+                        width: 14px;
+                        height: 14px;
+                        font-size: 10px;
+                    }
+                }
+            }
+
+
+            .pages_and_logo {
+                display: flex;
+                align-items: center;
+
+
+                .link_pages,
+                .close_link_pages {
+                    overflow: hidden;
+                    padding: 0;
+                    height: 0vh;
+                    background-color: #fff;
+                    position: absolute;
+                    top: 12vh;
+                    left: 0;
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                    transition: 0.5s;
+
+                    li {
+                        margin: 0;
+                        padding: 10px;
+                        border-bottom: 1px solid #93cade18;
+                    }
+
+                    .activeNav {
+                        color: #7FD3DF;
+                        font-weight: 700;
+                    }
+                }
+
+                .close_link_pages {
+                    height: 54.5vh;
+                }
+
+
+
+                .logo {
+                    margin: 0 30px 0 30px;
+                }
+
+                .toogle_responsiv {
+                    display: flex;
+
+                    button {
+                        background-color: transparent;
+                        border: 0;
+                        font-size: 25px;
+                        color: #7FD3DF;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    // ===  start of search === //
+
+    .search,
+    .closeSearch {
+        button {
+            top: 25px;
+            right: 30px;
+        }
+
+        .que_and_form {
+            width: 80%;
+
+
+            form {
+                input {
+                    width: 90%;
+                }
+            }
+        }
+    }
+
+    // === end search === //
+}
+
+@media (min-width:360px) {
+    .navbar {
+        padding: 4vh 0 10px 0;
+
+        .nav {
+            width: 90%;
+            grid-template-columns: repeat(2, 1fr);
+
+
+            .icons_nav {
+                .namber_cart {
+                    span {
+                        width: 14px;
+                        height: 14px;
+                        font-size: 10px;
+                    }
+                }
+            }
+
+
+            .pages_and_logo {
+                display: flex;
+                align-items: center;
+
+
+                .link_pages,
+                .close_link_pages {
+                    overflow: hidden;
+                    padding: 0;
+                    height: 0vh;
+                    background-color: #fff;
+                    position: absolute;
+                    top: 12vh;
+                    left: 0;
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                    transition: 0.5s;
+
+                    li {
+                        margin: 0;
+                        padding: 10px;
+                        border-bottom: 1px solid #93cade18;
+                    }
+
+                    .activeNav {
+                        color: #7FD3DF;
+                        font-weight: 700;
+                    }
+                }
+
+                .close_link_pages {
+                    height: 54.5vh;
+                }
+
+
+
+                .logo {
+                    margin: 0 30px 0 30px;
+                }
+
+                .toogle_responsiv {
+                    display: flex;
+
+                    button {
+                        background-color: transparent;
+                        border: 0;
+                        font-size: 25px;
+                        color: #7FD3DF;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+    // ===  start of search === //
+
+    .search,
+    .closeSearch {
+        .que_and_form {
+            width: 80%;
+
+            form {
+                input {
+                    width: 90%;
+                }
+            }
+        }
+    }
+
+    // === end search === //
+}
+
+@media (min-width:768px) {
+    .navbar {
+        padding: 7vh 0 15px 0;
+
+        .nav {
+            width: 90%;
+            grid-template-columns: repeat(2, 1fr);
+
+            .icons_nav {
+                .namber_cart {
+                    span {
+                        width: 14px;
+                        height: 14px;
+                        font-size: 10px;
+                    }
+                }
+            }
+
+            .pages_and_logo {
+                display: flex;
+                align-items: center;
+
+                .link_pages,
+                .close_link_pages {
+                    overflow: hidden;
+                    padding: 0;
+                    height: 0vh;
+                    background-color: #fff;
+                    position: absolute;
+                    top: 16vh;
+                    left: 0;
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                    transition: 0.5s;
+
+                    li {
+                        margin: 0;
+                        padding: 10px;
+                        border-bottom: 1px solid #93cade18;
+                    }
+
+                    .activeNav {
+                        color: #7FD3DF;
+                        font-weight: 700;
+                    }
+                }
+
+                .close_link_pages {
+                    height: 54.5vh;
+                }
+
+                .logo {
+                    margin: 0 30px 0 30px;
+                }
+
+                .toogle_responsiv {
+                    display: flex;
+
+                    button {
+                        background-color: transparent;
+                        border: 0;
+                        font-size: 25px;
+                        color: #7FD3DF;
+                    }
+                }
+            }
+        }
+    }
+
+
+    // ===  start of search === //
+    .search,
+    .closeSearch {
+        .que_and_form {
+            width: 80%;
+
+            form {
+                input {
+                    width: 90%;
+                }
+            }
+        }
+    }
+
+    // === end search === //
+}
+
+@media (min-width:860px) {
+    .navbar {
+        padding: 7vh 0 15px 0;
+
+        .nav {
+            width: 90%;
+            grid-template-columns: repeat(3, 1fr);
+
+            .pages_and_logo {
+
+                .link_pages,
+                .close_link_pages {
+                    overflow: visible;
+                    position: relative;
+                    height: auto;
+                    top: auto;
+                    display: flex;
+                    background-color: transparent;
+
+                    li {
+                        padding: 0px;
+                        margin: 0 0 0 15px;
+                        border-bottom: 0;
+
+                        a {
+                            font-size: 12.5px;
+                        }
+                    }
+                }
+
+                .logo {
+                    margin: 0 0 0 15px;
+                }
+
+                .toogle_responsiv {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:1024px) {
+    .navbar {
+        padding: 8vh 0 15px 0;
+
+        .nav {
+            width: 80%;
+
+            .pages_and_logo {
+
+                .link_pages,
+                .close_link_pages {
+                    li {
+                        margin: 0 0 0 15px;
+
+                        a {
+                            font-size: 13px;
+                        }
+                    }
+                }
+
+                .logo {
+                    margin: 0 0 0 30px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:1200px) {
+    .navbar {
+        padding: 5vh 0 15px 0;
+
+        .nav {
+            .pages_and_logo {
+
+                .link_pages,
+                .close_link_pages {
+                    li {
+                        margin: 0 0 0 15px;
+
+                        a {
+                            font-size: 15px;
+                        }
+                    }
+                }
+
+                .logo {
+                    margin: 0 0 0 30px;
+                }
+            }
+        }
+    }
+}

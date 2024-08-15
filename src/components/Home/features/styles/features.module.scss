@@ -1,0 +1,137 @@
+@use '../../slider/styles/button' as *;
+
+.features {
+    margin-top: 15vh;
+
+    .all_feature {
+        width: 80%;
+        border-bottom: 1px solid #7FD3DF;
+        padding-bottom: 25px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+
+        .feature {
+            display: flex;
+
+
+            .desc {
+                text-align: end;
+
+                h3 {
+                    font-size: 16.88px;
+                    font-weight: 500;
+                    line-height: 20.26px;
+
+                    margin-bottom: 5px;
+                }
+
+                p {
+                    color: #8E8E8E;
+                    font-size: 15.88px;
+                    font-weight: 400;
+                }
+            }
+
+            .icon {
+                margin-left: 10px;
+
+                span {
+                    @include btn (#7FD3DF, #fff, 8px, 40px, 40px);
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Rresponsiv  
+@media (max-width:321px) {
+
+    .features {
+        margin-top: 10vh;
+
+        .all_feature {
+            width: 90%;
+            display: grid;
+            grid-template-columns: 1fr;
+
+            .feature {
+                justify-content: end;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+@media (min-width:321px) {
+    .features {
+        margin-top: 10vh;
+
+        .all_feature {
+            width: 90%;
+            display: grid;
+            grid-template-columns: 1fr;
+
+            .feature {
+                justify-content: end;
+            }
+        }
+    }
+}
+
+
+
+
+
+@media (min-width:768px) {
+    .features {
+        margin-top: 12vh;
+
+        .all_feature {
+            width: 90%;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+
+
+
+@media (min-width:860px) {
+    .features {
+        margin-top: 15vh;
+    }
+}
+
+
+
+
+@media (min-width:1024px) {
+    .features {
+        .all_feature {
+            width: 80%;
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}

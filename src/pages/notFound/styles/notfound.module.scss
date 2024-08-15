@@ -1,0 +1,139 @@
+.NotFound {
+    padding-top: 15vh;
+    width: 40%;
+    height: 40%;
+    margin: auto;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+.back_Home {
+    text-align: center;
+    margin: 0 0 50px;
+
+    a {
+        background-color: #7FD3DF;
+        padding: 10px 20px;
+        font-weight: 600;
+        color: #fff;
+        border-radius: 15px;
+        transition: all 0.5s;
+
+        &:hover {
+            background-color: transparent;
+            color: black;
+            border: 1px solid #7FD3DF;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ==== Responsive ==== //
+@media (max-width:320px) {
+    .NotFound {
+        padding-top: 17vh;
+        width: 70%;
+        height: 70%;
+    }
+
+    .back_Home {
+        margin: 20px 0 50px;
+
+        a {
+            font-size: 13px;
+        }
+    }
+
+}
+
+
+
+
+@media (min-width:320px) {
+    .NotFound {
+        padding-top: 17vh;
+        width: 80%;
+        height: 80%;
+    }
+
+    .back_Home {
+        margin: 20px 0 50px;
+
+        a {
+            font-size: 13px;
+        }
+    }
+}
+
+
+
+
+
+@media (min-width:768px) {
+    .NotFound {
+        width: 50%;
+        height: 50%;
+    }
+
+    .back_Home {
+        margin: 15px 0 50px;
+
+        a {
+            font-size: 14px;
+        }
+    }
+}
+
+
+
+
+
+@media (min-width:860px) {
+    .NotFound {
+        padding-top: 15vh;
+    }
+
+    .back_Home {
+        a {
+            font-size: 15px;
+        }
+    }
+}
+
+
+
+
+
+
+@media (min-width:1024px) {
+    .NotFound {
+        width: 40%;
+        height: 40%;
+    }
+
+
+    .back_Home {
+        margin: 15px 0 50px;
+    }
+}
+
+
+
+// @media (min-width:1200px) {}

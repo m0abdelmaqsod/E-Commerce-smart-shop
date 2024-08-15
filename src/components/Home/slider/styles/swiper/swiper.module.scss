@@ -1,0 +1,19 @@
+@use '../button' as *;
+
+
+.swiPerButton {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+
+    button {
+        @include btn (#7FD3DF, #fff, 50%, 40px, 40px);
+        margin: 0 45px;
+
+        &:hover {
+            background-color: #7FD3DF;
+            color: #fff;
+        }
+    }
+}

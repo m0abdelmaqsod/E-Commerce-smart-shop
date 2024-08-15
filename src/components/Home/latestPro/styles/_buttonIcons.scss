@@ -1,0 +1,8 @@
+@mixin btnIcon ($bg , $b, $mr, $fs, $color) {
+    background-color: $bg;
+    border: $b;
+    margin-right: $mr;
+    font-size: $fs;
+    color: $color;
+    transition: all 0.5s;
+}

@@ -1,0 +1,178 @@
+.comment {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 5%;
+       column-gap: 5%;
+  width: 80%;
+  margin: auto;
+}
+.comment form {
+  text-align: end;
+  margin: 5vh 0;
+}
+.comment form h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.comment form .evaluation {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 5vh;
+}
+.comment form .evaluation h6 {
+  font-size: 18px;
+  margin: 0;
+}
+.comment form .evaluation .assess {
+  margin: 0 10px 0 0;
+}
+.comment form .evaluation .assess button {
+  background-color: transparent;
+  border: none;
+  margin-right: 3px;
+  font-size: 15px;
+  color: rgb(255, 174, 0);
+  transition: all 0.5s;
+}
+.comment form .evaluation .assess button:hover {
+  color: rgb(255, 174, 0);
+}
+.comment form .evaluation .assess .star {
+  color: #888;
+}
+.comment form input {
+  text-align: end;
+  outline: none;
+  border: 1px solid #cccccc;
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: 50px;
+  margin: 10px 0;
+}
+.comment form input::-moz-placeholder {
+  color: #888;
+}
+.comment form input::placeholder {
+  color: #888;
+}
+.comment form textarea {
+  outline: none;
+  text-align: end;
+  padding: 10px 20px;
+  border: 1px solid #cccccc;
+  border-radius: 20px;
+  width: 100%;
+  height: 20vh;
+}
+.comment form textarea::-moz-placeholder {
+  color: #888;
+}
+.comment form textarea::placeholder {
+  color: #888;
+}
+.comment form .name_email {
+  display: flex;
+  justify-content: space-between;
+}
+.comment form .name_email input {
+  width: 47%;
+}
+.comment form .errorMassing {
+  color: #CB1F27;
+  font-size: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin: 5px 0;
+}
+.comment form .errorMassing span {
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  margin-left: 10px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #CB1F27;
+}
+.comment form .div_errorMassing {
+  display: flex;
+}
+.comment form .btn_addComment {
+  margin-top: 10px;
+  background-color: #7FD3DF;
+  width: 120px;
+  padding: 8px;
+  border-radius: 50px;
+}
+.comment .comAll {
+  text-align: end;
+}
+.comment .comAll h3 {
+  margin: 5vh 0;
+}
+.comment .comAll .comScroll .com {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 20px;
+}
+.comment .comAll .comScroll .com .infoCom {
+  margin-right: 20px;
+}
+.comment .comAll .comScroll .com .infoCom h3 {
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+.comment .comAll .comScroll .com .infoCom .desc_comp {
+  font-size: 17px;
+}
+.comment .comAll .comScroll .com .infoCom .assess {
+  margin: 0;
+}
+.comment .comAll .comScroll .com .infoCom .assess button {
+  background-color: transparent;
+  border: none;
+  margin-right: 3px;
+  font-size: 18px;
+  color: rgb(255, 174, 0);
+  transition: all 0.5s;
+}
+.comment .comAll .comScroll .com .infoCom .assess button:hover {
+  color: rgb(255, 174, 0);
+}
+.comment .comAll .comScroll .com .infoCom .assess .star {
+  color: #888;
+}
+.comment .comAll .comScroll .com .infoCom .name_dt {
+  display: flex;
+  justify-content: end;
+}
+.comment .comAll .comScroll .com .infoCom .name_dt p {
+  font-size: 16px;
+}
+.comment .comAll .comScroll .com .infoCom .name_dt p:nth-child(1) {
+  margin-right: 40px;
+  color: #4d4d4d;
+}
+.comment .comAll .comScroll .com img {
+  width: 80px;
+  height: 20vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.comment .comAll .ShowLessComments, .comment .comAll .ViewMoreComments {
+  background-color: transparent;
+  text-decoration: underline;
+  font-size: 16px;
+  display: inline-block;
+  transition: all 0.5s;
+}
+.comment .comAll .ShowLessComments:hover, .comment .comAll .ViewMoreComments:hover {
+  color: #7FD3DF;
+}
+.comment .comAll .ViewComments {
+  display: none;
+}/*# sourceMappingURL=comment.module.css.map */

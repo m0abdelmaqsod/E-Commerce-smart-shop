@@ -1,0 +1,113 @@
+@use '../../../slider/styles/button' as *;
+
+
+.swiPerButton {
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+
+    button {
+        @include btn (#fff, #7FD3DF, 50%, 40px, 40px);
+
+        &:hover {
+            background-color: #fff;
+            color: #7FD3DF;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Responsive 
+@media (max-width:360px) {
+    .swiPerButton {
+        button {
+            @include btn (#fff, #7FD3DF, 50%, 35px, 35px);
+        }
+    }
+}
+
+
+
+
+@media (min-width:360px) {
+    .swiPerButton {
+        top: 25%;
+
+        button {
+            @include btn (#fff, #7FD3DF, 50%, 40px, 40px);
+        }
+    }
+}
+
+
+
+
+@media (min-width:768px) {
+    .swiPerButton {
+        top: 30%;
+
+        button {
+            @include btn (#fff, #7FD3DF, 50%, 35px, 35px);
+        }
+    }
+}
+
+
+
+
+@media (min-width:860px) {
+
+    .swiPerButton {
+        top: 25%;
+
+        button {
+            @include btn (#fff, #7FD3DF, 50%, 35px, 35px);
+        }
+    }
+}
+
+
+
+
+@media (min-width:1024px) {
+    .swiPerButton {
+        top: 25%;
+
+        button {
+            @include btn (#fff, #7FD3DF, 50%, 35px, 35px);
+        }
+    }
+}
+
+
+
+
+@media (min-width:1200px) {
+    .swiPerButton {
+        top: 30%;
+
+        button {
+            @include btn (#fff, #7FD3DF, 50%, 40px, 40px);
+        }
+    }
+}

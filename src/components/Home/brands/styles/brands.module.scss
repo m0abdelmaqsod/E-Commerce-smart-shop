@@ -1,0 +1,191 @@
+.brands {
+    width: 80%;
+    margin: 20vh auto;
+
+
+
+    .title_pro {
+        h3 {
+            position: relative;
+            margin-bottom: 7vh;
+            display: flex;
+            justify-content: center;
+
+            span {
+                width: 130px;
+                border-radius: 20px;
+                height: 4px;
+                background-color: #7FD3DF;
+                position: absolute;
+                bottom: -15px;
+            }
+        }
+    }
+
+    .swiperSlide {
+        img {
+            width: 100%;
+            height: 10vh;
+            object-fit: contain;
+        }
+
+        .div_brands {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// Responsive
+@media (max-width:321px) {
+
+    .brands {
+        width: 90%;
+        margin: 10vh auto;
+
+
+
+        .title_pro {
+            h3 {
+                margin-bottom: 5vh;
+                font-size: 19px;
+
+                span {
+                    width: 85px;
+                    height: 2px;
+                    bottom: -10px;
+                }
+            }
+        }
+
+
+        .swiperSlide {
+            img {
+                height: 15vh;
+            }
+        }
+    }
+
+}
+
+
+
+
+
+@media (min-width:321px) {
+    .brands {
+        width: 90%;
+        margin: 10vh auto;
+
+
+
+        .title_pro {
+            h3 {
+                span {
+                    width: 100px;
+                    height: 2px;
+                    bottom: -10px;
+                }
+            }
+        }
+
+
+        .swiperSlide {
+            img {
+                height: 15vh;
+            }
+        }
+    }
+}
+
+
+
+
+
+@media (min-width:768px) {
+    .brands {
+        margin: 15vh auto;
+
+        .title_pro {
+            h3 {
+                span {
+                    width: 110px;
+                    bottom: -13px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+@media (min-width:860px) {
+    .brands {
+        margin: 17vh auto;
+
+        .title_pro {
+            h3 {
+                span {
+                    width: 120px;
+                    height: 3px;
+                    bottom: -15px;
+                }
+            }
+        }
+
+        .swiperSlide {
+            img {
+                height: 13vh;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+@media (min-width:1024px) {
+    .brands {
+        width: 80%;
+        margin: 20vh auto;
+
+        .title_pro {
+            h3 {
+                span {
+                    width: 130px;
+                }
+            }
+        }
+
+        .swiperSlide {
+            img {
+                height: 10vh;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+// @media (min-width:1200px) {
+// }

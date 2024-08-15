@@ -1,0 +1,348 @@
+.NavCart,
+.close_cart {
+  background-color: #fff;
+  position: fixed;
+  box-shadow: 0 0 5px #d8d8d8;
+  top: 0;
+  left: -50px;
+  padding: 20px 10px 10px;
+  width: 25%;
+  height: 100%;
+  z-index: 10;
+  transition: all 0.5s;
+}
+.NavCart .dev_close,
+.close_cart .dev_close {
+  text-align: end;
+  padding: 0 15px 10px;
+}
+.NavCart .dev_close .close,
+.close_cart .dev_close .close {
+  font-size: 20px;
+  background-color: transparent;
+  border: 0;
+}
+.NavCart .carts,
+.close_cart .carts {
+  height: 83%;
+  overflow: scroll;
+}
+.NavCart .carts::-webkit-scrollbar,
+.close_cart .carts::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.NavCart .carts .massageCart,
+.close_cart .carts .massageCart {
+  margin-top: 5vh;
+  padding: 0 20px 20px 0;
+  text-align: end;
+  font-size: 20px;
+  border-bottom: 1px solid rgba(147, 202, 222, 0.3019607843);
+}
+.NavCart .carts .div_Carts,
+.close_cart .carts .div_Carts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 10px 10px 20px;
+  margin-bottom: 5px;
+  position: relative;
+}
+.NavCart .carts .div_Carts .delete_cart,
+.close_cart .carts .div_Carts .delete_cart {
+  display: flex;
+  align-items: center;
+}
+.NavCart .carts .div_Carts .delete_cart button,
+.close_cart .carts .div_Carts .delete_cart button {
+  background-color: transparent;
+  border: 0;
+  font-size: 18px;
+  margin-left: 20px;
+}
+.NavCart .carts .div_Carts .desc_and_price,
+.close_cart .carts .div_Carts .desc_and_price {
+  grid-column: 2/4;
+  text-align: end;
+  padding-right: 15px;
+}
+.NavCart .carts .div_Carts .desc_and_price h3,
+.close_cart .carts .div_Carts .desc_and_price h3 {
+  font-size: 14px;
+  font-weight: 700;
+  height: 8vh;
+  overflow: hidden;
+}
+.NavCart .carts .div_Carts .desc_and_price .price_and_Quant,
+.close_cart .carts .div_Carts .desc_and_price .price_and_Quant {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 5px;
+}
+.NavCart .carts .div_Carts .desc_and_price .price_and_Quant h6,
+.close_cart .carts .div_Carts .desc_and_price .price_and_Quant h6 {
+  margin-right: 20px;
+  color: #a1d8e0;
+  font-size: 14px;
+}
+.NavCart .carts .div_Carts .desc_and_price .price_and_Quant p,
+.close_cart .carts .div_Carts .desc_and_price .price_and_Quant p {
+  margin: 0px;
+  text-align: end;
+  font-size: 12px;
+}
+.NavCart .carts .div_Carts .desc_and_price .inc_or_dec_prod,
+.close_cart .carts .div_Carts .desc_and_price .inc_or_dec_prod {
+  background-color: rgba(147, 202, 222, 0.3019607843);
+  display: flex;
+  justify-content: end;
+  padding: 5px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.NavCart .carts .div_Carts .desc_and_price .inc_or_dec_prod button,
+.close_cart .carts .div_Carts .desc_and_price .inc_or_dec_prod button {
+  border: none;
+  font-weight: bolder;
+  padding: 0 5px;
+  font-size: 13px;
+  background-color: transparent;
+  transition: all 0.5s;
+}
+.NavCart .carts .div_Carts .desc_and_price .inc_or_dec_prod button:hover,
+.close_cart .carts .div_Carts .desc_and_price .inc_or_dec_prod button:hover {
+  color: red;
+}
+.NavCart .carts .div_Carts .desc_and_price .inc_or_dec_prod p,
+.close_cart .carts .div_Carts .desc_and_price .inc_or_dec_prod p {
+  width: 80px;
+  text-align: center;
+  margin: 0;
+}
+.NavCart .carts .div_Carts .img_cart img,
+.close_cart .carts .div_Carts .img_cart img {
+  width: 100%;
+  height: 20vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.NavCart .carts .div_Carts .border_bottom,
+.close_cart .carts .div_Carts .border_bottom {
+  position: absolute;
+  left: -10px;
+  bottom: 0px;
+  background-color: rgba(147, 202, 222, 0.3019607843);
+  width: 100%;
+  height: 2px;
+}
+.NavCart .total_price_pro,
+.close_cart .total_price_pro {
+  background-color: #7FD3DF;
+  padding: 15px;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.NavCart .total_price_pro a,
+.close_cart .total_price_pro a {
+  display: flex;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px 30px;
+}
+.NavCart .total_price_pro p,
+.close_cart .total_price_pro p {
+  font-size: 17px;
+  margin: 0;
+}
+
+.close_cart {
+  width: 25%;
+  left: 0px;
+  overflow: hidden;
+}
+
+@media (max-width: 360px) {
+  .NavCart .carts,
+  .close_cart .carts {
+    height: 83.5%;
+    margin: 0;
+  }
+  .NavCart .carts .massageCart,
+  .close_cart .carts .massageCart {
+    font-size: 18px;
+  }
+  .NavCart .carts .div_Carts .desc_and_price h3,
+  .close_cart .carts .div_Carts .desc_and_price h3 {
+    font-size: 13px;
+    font-weight: 600;
+    height: 9vh;
+  }
+  .NavCart .carts .div_Carts .desc_and_price .price_and_Quant h6,
+  .close_cart .carts .div_Carts .desc_and_price .price_and_Quant h6 {
+    font-size: 12px;
+  }
+  .NavCart .carts .div_Carts .desc_and_price .price_and_Quant p,
+  .close_cart .carts .div_Carts .desc_and_price .price_and_Quant p {
+    font-size: 10px;
+  }
+  .NavCart .carts .div_Carts .desc_and_price .inc_or_dec_prod,
+  .close_cart .carts .div_Carts .desc_and_price .inc_or_dec_prod {
+    padding: 3px;
+    margin-left: 35px;
+  }
+  .NavCart .carts .div_Carts .desc_and_price .inc_or_dec_prod button,
+  .close_cart .carts .div_Carts .desc_and_price .inc_or_dec_prod button {
+    margin: 0;
+  }
+  .NavCart .total_price_pro,
+  .close_cart .total_price_pro {
+    padding: 10px;
+    bottom: 0;
+  }
+  .NavCart .total_price_pro a,
+  .close_cart .total_price_pro a {
+    padding: 8px 30px;
+  }
+  .close_cart {
+    width: 85%;
+  }
+}
+@media (min-width: 360px) {
+  .NavCart .carts,
+  .close_cart .carts {
+    height: 83.5%;
+    margin: 0;
+  }
+  .NavCart .carts .massageCart,
+  .close_cart .carts .massageCart {
+    font-size: 18px;
+  }
+  .NavCart .carts .div_Carts .desc_and_price h3,
+  .close_cart .carts .div_Carts .desc_and_price h3 {
+    font-size: 14px;
+    font-weight: 600;
+    height: 9vh;
+  }
+  .NavCart .carts .div_Carts .desc_and_price .price_and_Quant h6,
+  .close_cart .carts .div_Carts .desc_and_price .price_and_Quant h6 {
+    font-size: 12px;
+  }
+  .NavCart .carts .div_Carts .desc_and_price .price_and_Quant p,
+  .close_cart .carts .div_Carts .desc_and_price .price_and_Quant p {
+    font-size: 10px;
+  }
+  .NavCart .carts .div_Carts .desc_and_price .inc_or_dec_prod,
+  .close_cart .carts .div_Carts .desc_and_price .inc_or_dec_prod {
+    padding: 3px;
+    margin-left: 35px;
+  }
+  .NavCart .carts .div_Carts .desc_and_price .inc_or_dec_prod button,
+  .close_cart .carts .div_Carts .desc_and_price .inc_or_dec_prod button {
+    margin: 0;
+  }
+  .NavCart .total_price_pro,
+  .close_cart .total_price_pro {
+    padding: 10px;
+    bottom: 0;
+  }
+  .NavCart .total_price_pro a,
+  .close_cart .total_price_pro a {
+    padding: 8px 30px;
+  }
+  .close_cart {
+    width: 80%;
+  }
+}
+@media (min-width: 768px) {
+  .NavCart .carts .div_Carts .desc_and_price .price_and_Quant h6,
+  .close_cart .carts .div_Carts .desc_and_price .price_and_Quant h6 {
+    font-size: 14px;
+  }
+  .NavCart .carts .div_Carts .desc_and_price .price_and_Quant p,
+  .close_cart .carts .div_Carts .desc_and_price .price_and_Quant p {
+    font-size: 12px;
+  }
+  .NavCart .carts .div_Carts .desc_and_price .inc_or_dec_prod,
+  .close_cart .carts .div_Carts .desc_and_price .inc_or_dec_prod {
+    padding: 4px;
+    margin-left: 15px;
+  }
+  .NavCart .carts .div_Carts .desc_and_price .inc_or_dec_prod button,
+  .close_cart .carts .div_Carts .desc_and_price .inc_or_dec_prod button {
+    margin: 0;
+    padding: 0 5px;
+  }
+  .close_cart {
+    width: 40%;
+  }
+}
+@media (min-width: 860px) {
+  .NavCart .carts,
+  .close_cart .carts {
+    height: 82%;
+  }
+  .NavCart .carts .massageCart,
+  .close_cart .carts .massageCart {
+    font-size: 18px;
+  }
+  .NavCart .total_price_pro,
+  .close_cart .total_price_pro {
+    padding: 13px;
+  }
+  .NavCart .total_price_pro a,
+  .close_cart .total_price_pro a {
+    padding: 9px 30px;
+  }
+  .close_cart {
+    width: 35%;
+  }
+}
+@media (min-width: 1024px) {
+  .NavCart .carts,
+  .close_cart .carts {
+    height: 82%;
+  }
+  .NavCart .carts .div_Carts .desc_and_price .inc_or_dec_prod,
+  .close_cart .carts .div_Carts .desc_and_price .inc_or_dec_prod {
+    margin-left: 25px;
+  }
+  .close_cart {
+    width: 30%;
+  }
+}
+@media (min-width: 1200px) {
+  .NavCart .carts,
+  .close_cart .carts {
+    height: 83%;
+  }
+  .NavCart .carts .div_Carts,
+  .close_cart .carts .div_Carts {
+    padding: 10px 10px 20px;
+  }
+  .NavCart .carts .div_Carts .desc_and_price h3,
+  .close_cart .carts .div_Carts .desc_and_price h3 {
+    font-size: 14px;
+    height: 8vh;
+  }
+  .NavCart .carts .div_Carts .desc_and_price .price_and_Quant h6,
+  .close_cart .carts .div_Carts .desc_and_price .price_and_Quant h6 {
+    font-size: 14px;
+  }
+  .NavCart .carts .div_Carts .desc_and_price .price_and_Quant p,
+  .close_cart .carts .div_Carts .desc_and_price .price_and_Quant p {
+    font-size: 12px;
+  }
+  .NavCart .carts .div_Carts .desc_and_price .inc_or_dec_prod,
+  .close_cart .carts .div_Carts .desc_and_price .inc_or_dec_prod {
+    margin-left: 10px;
+  }
+  .close_cart {
+    width: 25%;
+  }
+}/*# sourceMappingURL=navCart.module.css.map */

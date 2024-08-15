@@ -1,0 +1,399 @@
+.signIn {
+  padding: 15vh 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8%;
+}
+.signIn .div_form {
+  text-align: end;
+}
+.signIn .div_form img {
+  width: 13rem;
+  margin: 8vh 0;
+}
+.signIn .div_form h3 {
+  font-weight: 600;
+  font-size: 18px;
+}
+.signIn .div_form p {
+  font-size: 12px;
+}
+.signIn .div_form form {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: 80%;
+  justify-content: end;
+}
+.signIn .div_form form div {
+  background-color: #fff;
+  border-bottom: 1px solid rgba(87, 87, 87, 0.2196078431);
+  box-shadow: 0px 0px 1px rgba(163, 163, 163, 0.1294117647);
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  justify-content: end;
+  margin: 10px 0 0;
+}
+.signIn .div_form form div label {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.5019607843);
+}
+.signIn .div_form form div input {
+  background-color: transparent;
+  padding: 10px 15px;
+  border: 0;
+  outline: none;
+  text-align: end;
+}
+.signIn .div_form form .errorMassing {
+  color: #ff0000;
+  margin: 10px 0 0;
+  display: flex;
+  justify-content: end;
+}
+.signIn .div_form form .errorMassing span {
+  background-color: #ff0000;
+  color: #fff;
+  display: grid;
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin-left: 10px;
+  border-radius: 50%;
+}
+.signIn .div_form .btn_Sign_and_forget_password {
+  margin-top: 5vh;
+  display: flex;
+  justify-content: end;
+}
+.signIn .div_form .btn_Sign_and_forget_password .btn_Sign {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.signIn .div_form .btn_Sign_and_forget_password .btn_Sign a {
+  color: #7FD3DF;
+  font-weight: 600;
+}
+.signIn .div_form .btn_Sign_and_forget_password .btn_Sign button {
+  background-color: #7FD3DF;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+}
+.signIn .div_form .media {
+  margin-top: 5vh;
+}
+.signIn .div_form .media p {
+  font-size: 22px;
+  font-weight: 600;
+}
+.signIn .div_form .media .icons_media ul {
+  display: flex;
+  justify-content: end;
+}
+.signIn .div_form .media .icons_media ul li button {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-left: 10px;
+  font-size: 25px;
+  color: #fff;
+}
+.signIn .div_form .media .icons_media ul li .bg_l {
+  background-color: #0A66C2;
+}
+.signIn .div_form .media .icons_media ul li .bg_p {
+  background-color: #CB1F27;
+}
+.signIn .div_form .media .icons_media ul li .bg_f {
+  background-color: #1877F2;
+}
+.signIn .div_form .media .icons_media ul li .bg_t {
+  background-color: #55ACEE;
+}
+.signIn .div_img {
+  width: 100%;
+  position: relative;
+}
+.signIn .div_img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.signIn .div_img .btn_signAndCreate {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(0%, -50%);
+}
+.signIn .div_img .btn_signAndCreate a {
+  background-color: #fff;
+  display: flex;
+  padding: 10px 15px;
+  margin: 5px 0;
+  font-weight: 600;
+  border-end-end-radius: 50px;
+  border-top-right-radius: 50px;
+}
+.signIn .div_img .btn_signAndCreate .btnActive {
+  background-color: #7FD3DF;
+  color: #fff;
+}
+
+@media (max-width: 320px) {
+  .signIn {
+    grid-template-columns: 1fr;
+    gap: 0%;
+  }
+  .signIn .div_form {
+    text-align: center;
+  }
+  .signIn .div_form img {
+    width: 10rem;
+    margin: 5vh 0 18vh;
+  }
+  .signIn .div_form form {
+    margin: 20px auto;
+    width: 90%;
+    grid-template-columns: 1fr;
+  }
+  .signIn .div_form .btn_Sign_and_forget_password {
+    justify-content: center;
+  }
+  .signIn .div_form .btn_Sign_and_forget_password .btn_Sign {
+    width: 90%;
+  }
+  .signIn .div_form .btn_Sign_and_forget_password .btn_Sign a {
+    font-size: 12px;
+  }
+  .signIn .div_form .btn_Sign_and_forget_password .btn_Sign button {
+    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  .signIn .div_form .media p {
+    font-size: 20px;
+  }
+  .signIn .div_form .media .icons_media ul {
+    justify-content: center;
+    padding: 0;
+  }
+  .signIn .div_form .media .icons_media ul li button {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+  .signIn .div_img {
+    width: 100%;
+    position: absolute;
+    grid-row: 1/1;
+  }
+  .signIn .div_img img {
+    display: none;
+  }
+  .signIn .div_img .btn_signAndCreate {
+    top: 20vh;
+    left: 0%;
+  }
+  .signIn .div_img .btn_signAndCreate a {
+    padding: 10px 15px;
+    font-size: 13px;
+    margin: 5px 0;
+    border: 1px solid rgba(87, 87, 87, 0.2196078431);
+  }
+}
+@media (min-width: 320px) {
+  .signIn {
+    grid-template-columns: 1fr;
+    gap: 0%;
+  }
+  .signIn .div_form {
+    text-align: center;
+  }
+  .signIn .div_form img {
+    width: 10rem;
+    margin: 5vh 0 18vh;
+  }
+  .signIn .div_form form {
+    margin: 20px auto;
+    width: 90%;
+    grid-template-columns: 1fr;
+  }
+  .signIn .div_form .btn_Sign_and_forget_password {
+    justify-content: center;
+  }
+  .signIn .div_form .btn_Sign_and_forget_password .btn_Sign {
+    width: 90%;
+  }
+  .signIn .div_form .btn_Sign_and_forget_password .btn_Sign a {
+    font-size: 14px;
+  }
+  .signIn .div_form .btn_Sign_and_forget_password .btn_Sign button {
+    font-size: 14px;
+    padding: 8px 13px;
+    border-radius: 7px;
+  }
+  .signIn .div_form .media p {
+    font-size: 20px;
+  }
+  .signIn .div_form .media .icons_media ul {
+    justify-content: center;
+    padding: 0;
+  }
+  .signIn .div_form .media .icons_media ul li button {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+  .signIn .div_img {
+    width: 100%;
+    position: absolute;
+    grid-row: 1/1;
+  }
+  .signIn .div_img img {
+    display: none;
+  }
+  .signIn .div_img .btn_signAndCreate {
+    top: 20vh;
+    left: 0%;
+  }
+  .signIn .div_img .btn_signAndCreate a {
+    padding: 10px 15px;
+    font-size: 13px;
+    margin: 5px 0;
+    border: 1px solid rgba(87, 87, 87, 0.2196078431);
+  }
+}
+@media (min-width: 768px) {
+  .signIn {
+    padding: 18vh 0 0;
+  }
+  .signIn .div_form img {
+    width: 13rem;
+    margin: 8vh 0 15vh;
+  }
+  .signIn .div_form form {
+    width: 70%;
+  }
+  .signIn .div_form .btn_Sign_and_forget_password .btn_Sign {
+    width: 70%;
+  }
+  .signIn .div_form .btn_Sign_and_forget_password .btn_Sign a {
+    font-size: 15px;
+  }
+  .signIn .div_form .btn_Sign_and_forget_password .btn_Sign button {
+    font-size: 15px;
+    padding: 10px 15px;
+    border-radius: 10px;
+  }
+  .signIn .div_form .media p {
+    font-size: 23px;
+  }
+  .signIn .div_form .media .icons_media ul li button {
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+  }
+  .signIn .div_img {
+    position: absolute;
+    grid-row: 1/1;
+  }
+  .signIn .div_img .btn_signAndCreate {
+    top: 22vh;
+  }
+  .signIn .div_img .btn_signAndCreate a {
+    font-size: 15px;
+  }
+}
+@media (min-width: 860px) {
+  .signIn {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0%;
+  }
+  .signIn .div_form img {
+    margin: 5vh 0 8vh;
+  }
+  .signIn .div_form form {
+    margin: 0px auto;
+    width: 90%;
+  }
+  .signIn .div_form .btn_Sign_and_forget_password .btn_Sign {
+    width: 90%;
+  }
+  .signIn .div_form .btn_Sign_and_forget_password .btn_Sign a {
+    font-size: 13px;
+  }
+  .signIn .div_form .media p {
+    font-size: 20px;
+  }
+  .signIn .div_form .media .icons_media ul li button {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+  .signIn .div_img {
+    position: relative;
+    grid-row: 1/1;
+    grid-column: 2/2;
+  }
+  .signIn .div_img img {
+    display: flex;
+  }
+  .signIn .div_img .btn_signAndCreate {
+    top: 40%;
+  }
+  .signIn .div_img .btn_signAndCreate a {
+    padding: 10px 15px;
+    font-size: 15px;
+    margin: 5px 0;
+    border: none;
+  }
+}
+@media (min-width: 1024px) {
+  .signIn {
+    gap: 3%;
+  }
+  .signIn .div_form img {
+    margin: 8vh 0;
+  }
+}
+@media (min-width: 1200px) {
+  .signIn {
+    padding: 15vh 0 0;
+    gap: 8%;
+  }
+  .signIn .div_form {
+    text-align: end;
+  }
+  .signIn .div_form form {
+    width: auto;
+    grid-template-columns: 80%;
+  }
+  .signIn .div_form .btn_Sign_and_forget_password {
+    justify-content: end;
+  }
+  .signIn .div_form .btn_Sign_and_forget_password .btn_Sign {
+    width: 80%;
+  }
+  .signIn .div_form .media p {
+    font-size: 23px;
+  }
+  .signIn .div_form .media .icons_media ul {
+    justify-content: end;
+  }
+  .signIn .div_form .media .icons_media ul li button {
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+  }
+  .signIn .div_img .btn_signAndCreate {
+    top: 50%;
+  }
+}/*# sourceMappingURL=signIn.module.css.map */

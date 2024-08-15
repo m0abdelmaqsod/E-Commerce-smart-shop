@@ -1,0 +1,618 @@
+.signIn {
+    padding: 15vh 0 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8%;
+
+    .div_form {
+        text-align: end;
+
+        img {
+            width: 13rem;
+            margin: 8vh 0;
+        }
+
+        h3 {
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+
+        form {
+            margin: 20px 0;
+            display: grid;
+            grid-template-columns: 80%;
+            justify-content: end;
+
+
+            div {
+                background-color: #fff;
+                border-bottom: 1px solid #57575738;
+                box-shadow: 0px 0px 1px #a3a3a321;
+                display: grid;
+                grid-template-columns: 50px 1fr;
+                justify-content: end;
+                margin: 10px 0 0;
+                // gap: 10%;
+
+                label {
+                    font-size: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    color: #00000080;
+                }
+
+                input {
+                    background-color: transparent;
+                    padding: 10px 15px;
+                    border: 0;
+                    outline: none;
+                    text-align: end;
+                }
+            }
+
+            .errorMassing {
+                color: #ff0000;
+                margin: 10px 0 0;
+                display: flex;
+                justify-content: end;
+
+                span {
+                    background-color: #ff0000;
+                    color: #fff;
+                    display: grid;
+                    width: 20px;
+                    height: 20px;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: 600;
+                    margin-left: 10px;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        .btn_Sign_and_forget_password {
+            margin-top: 5vh;
+            display: flex;
+            justify-content: end;
+
+            .btn_Sign {
+                width: 80%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                a {
+                    color: #7FD3DF;
+                    font-weight: 600;
+                }
+
+                button {
+                    background-color: #7FD3DF;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                    color: #fff;
+                }
+            }
+        }
+
+        .media {
+            margin-top: 5vh;
+
+            p {
+                font-size: 22px;
+                font-weight: 600;
+            }
+
+            .icons_media {
+
+                ul {
+                    display: flex;
+                    justify-content: end;
+
+                    li {
+
+                        button {
+                            width: 45px;
+                            height: 45px;
+                            border-radius: 50%;
+                            margin-left: 10px;
+                            font-size: 25px;
+                            color: #fff;
+                        }
+
+                        .bg_l {
+                            background-color: #0A66C2;
+                        }
+
+                        .bg_p {
+                            background-color: #CB1F27;
+                        }
+
+                        .bg_f {
+                            background-color: #1877F2;
+                        }
+
+                        .bg_t {
+                            background-color: #55ACEE;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+    // ===== start of div_img ===== //
+    .div_img {
+        width: 100%;
+        position: relative;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .btn_signAndCreate {
+            position: absolute;
+            top: 50%;
+            left: 0%;
+            transform: translate(-0%, -50%);
+
+            a {
+                background-color: #fff;
+                display: flex;
+
+                padding: 10px 15px;
+                margin: 5px 0;
+                font-weight: 600;
+
+                border-end-end-radius: 50px;
+                border-top-right-radius: 50px;
+            }
+
+            .btnActive {
+                background-color: #7FD3DF;
+                color: #fff;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ==== Responsive ==== //
+@media (max-width:320px) {
+    .signIn {
+        grid-template-columns: 1fr;
+        gap: 0%;
+
+        .div_form {
+            text-align: center;
+
+            img {
+                width: 10rem;
+                margin: 5vh 0 18vh;
+            }
+
+            form {
+                margin: 20px auto;
+                width: 90%;
+                grid-template-columns: 1fr;
+            }
+
+            .btn_Sign_and_forget_password {
+                justify-content: center;
+
+                .btn_Sign {
+                    width: 90%;
+
+                    a {
+                        font-size: 12px;
+                    }
+
+                    button {
+                        font-size: 13px;
+                        padding: 5px 10px;
+                        border-radius: 5px;
+                    }
+                }
+            }
+
+            .media {
+                p {
+                    font-size: 20px;
+                }
+
+                .icons_media {
+                    ul {
+                        justify-content: center;
+                        padding: 0;
+
+                        li {
+                            button {
+                                width: 35px;
+                                height: 35px;
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        // ===== start of div_img ===== //
+        .div_img {
+            width: 100%;
+            position: absolute;
+            grid-row: 1/1;
+
+            img {
+                display: none;
+            }
+
+            .btn_signAndCreate {
+                top: 20vh;
+                left: 0%;
+
+                a {
+                    padding: 10px 15px;
+                    font-size: 13px;
+                    margin: 5px 0;
+                    border: 1px solid #57575738;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+@media (min-width:320px) {
+    .signIn {
+        grid-template-columns: 1fr;
+        gap: 0%;
+
+        .div_form {
+            text-align: center;
+
+            img {
+                width: 10rem;
+                margin: 5vh 0 18vh;
+            }
+
+            form {
+                margin: 20px auto;
+                width: 90%;
+                grid-template-columns: 1fr;
+            }
+
+            .btn_Sign_and_forget_password {
+                justify-content: center;
+
+                .btn_Sign {
+                    width: 90%;
+
+                    a {
+                        font-size: 14px;
+                    }
+
+                    button {
+                        font-size: 14px;
+                        padding: 8px 13px;
+                        border-radius: 7px;
+                    }
+                }
+            }
+
+            .media {
+                p {
+                    font-size: 20px;
+                }
+
+                .icons_media {
+                    ul {
+                        justify-content: center;
+                        padding: 0;
+
+                        li {
+                            button {
+                                width: 35px;
+                                height: 35px;
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        // ===== start of div_img ===== //
+        .div_img {
+            width: 100%;
+            position: absolute;
+            grid-row: 1/1;
+
+            img {
+                display: none;
+            }
+
+            .btn_signAndCreate {
+                top: 20vh;
+                left: 0%;
+
+                a {
+                    padding: 10px 15px;
+                    font-size: 13px;
+                    margin: 5px 0;
+                    border: 1px solid #57575738;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+@media (min-width:768px) {
+    .signIn {
+        padding: 18vh 0 0;
+
+        .div_form {
+
+            img {
+                width: 13rem;
+                margin: 8vh 0 15vh;
+            }
+
+            form {
+                width: 70%;
+            }
+
+            .btn_Sign_and_forget_password {
+
+                .btn_Sign {
+                    width: 70%;
+
+                    a {
+                        font-size: 15px;
+                    }
+
+                    button {
+                        font-size: 15px;
+                        padding: 10px 15px;
+                        border-radius: 10px;
+                    }
+                }
+            }
+
+            .media {
+                p {
+                    font-size: 23px;
+                }
+
+                .icons_media {
+                    ul {
+                        li {
+                            button {
+                                width: 40px;
+                                height: 40px;
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        // ===== start of div_img ===== //
+        .div_img {
+            position: absolute;
+            grid-row: 1/1;
+
+            .btn_signAndCreate {
+                top: 22vh;
+
+                a {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+@media (min-width:860px) {
+    .signIn {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0%;
+
+        .div_form {
+            img {
+                margin: 5vh 0 8vh;
+            }
+
+            form {
+                margin: 0px auto;
+                width: 90%;
+            }
+
+            .btn_Sign_and_forget_password {
+                .btn_Sign {
+                    width: 90%;
+
+                    a {
+                        font-size: 13px;
+                    }
+                }
+            }
+
+            .media {
+                p {
+                    font-size: 20px;
+                }
+
+                .icons_media {
+                    ul {
+                        li {
+                            button {
+                                width: 35px;
+                                height: 35px;
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        // ===== start of div_img ===== //
+        .div_img {
+            position: relative;
+            grid-row: 1/1;
+            grid-column: 2/2;
+
+            img {
+                display: flex;
+            }
+
+            .btn_signAndCreate {
+                top: 40%;
+
+                a {
+                    padding: 10px 15px;
+                    font-size: 15px;
+                    margin: 5px 0;
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+@media (min-width:1024px) {
+    .signIn {
+        gap: 3%;
+
+        .div_form {
+            img {
+                margin: 8vh 0;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+@media (min-width:1200px) {
+    .signIn {
+        padding: 15vh 0 0;
+        gap: 8%;
+
+        .div_form {
+            text-align: end;
+
+            form {
+                width: auto;
+                grid-template-columns: 80%;
+            }
+
+            .btn_Sign_and_forget_password {
+                justify-content: end;
+
+                .btn_Sign {
+                    width: 80%;
+                }
+            }
+
+            .media {
+                p {
+                    font-size: 23px;
+                }
+
+                .icons_media {
+                    ul {
+                        justify-content: end;
+                        li {
+                            button {
+                                width: 40px;
+                                height: 40px;
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // ===== start of div_img ===== //
+        .div_img {
+            .btn_signAndCreate {
+                top: 50%;
+            }
+        }
+    }
+}
