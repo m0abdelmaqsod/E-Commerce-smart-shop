@@ -15,6 +15,19 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 
 
+
+import imgBrand1 from "../../../../public/images/prands/tablogo1.png";
+import imgBrand2 from "../../../../public/images/prands/brandlogo2.png";
+import imgBrand3 from "../../../../public/images/prands/brandlogo4.png";
+import imgBrand4 from "../../../../public/images/prands/brandlogo5.png";
+import imgBrand5 from "../../../../public/images/prands/brandlogo6.png";
+
+
+
+
+
+
+
 const Brands = () => {
 
   // === handel Responsive view === //
@@ -68,47 +81,47 @@ const Brands = () => {
 
           <div className={styles.div_brands}>
             <SwiperSlide>
-              <img src="../../../../public/images/prands/brandlogo5.png " alt="" />
+              <img src={imgBrand1} alt="" />
             </SwiperSlide>
 
             <SwiperSlide>
-              <img src="../../../../public/images/prands/tablogo1.png" alt="" />
+              <img src={imgBrand2} alt="" />
             </SwiperSlide>
 
             <SwiperSlide>
-              <img src="../../../../public/images/prands/brandlogo4.png" alt="" />
+              <img src={imgBrand3} alt="" />
             </SwiperSlide>
 
             <SwiperSlide>
-              <img src="../../../../public/images/prands/brandlogo6.png" alt="" />
+              <img src={imgBrand4} alt="" />
             </SwiperSlide>
 
             <SwiperSlide>
-              <img src="../../../../public/images/prands/brandlogo2.png" alt="" />
+              <img src={imgBrand5} alt="" />
             </SwiperSlide>
 
             <SwiperSlide>
-              <img src="../../../../public/images/prands/brandlogo5.png" alt="" />
+              <img src={imgBrand1} alt="" />
             </SwiperSlide>
 
             <SwiperSlide>
-              <img src="../../../../public/images/prands/brandlogo4.png" alt="" />
+              <img src={imgBrand3} alt="" />
             </SwiperSlide>
 
             <SwiperSlide>
-              <img src="../../../../public/images/prands/brandlogo5.png" alt="" />
+              <img src={imgBrand5} alt="" />
             </SwiperSlide>
 
             <SwiperSlide>
-              <img src="../../../../public/images/prands/brandlogo4.png" alt="" />
+              <img src={imgBrand2} alt="" />
             </SwiperSlide>
 
             <SwiperSlide>
-              <img src={'../../../../public/images/prands/brandlogo2.png'} alt="" />
+              <img src={imgBrand4} alt="" />
             </SwiperSlide>
 
             <SwiperSlide>
-              <img src={'../../../../public/images/prands/brandlogo4.png'} alt="" />
+              <img src={imgBrand1} alt="" />
             </SwiperSlide>
           </div>
         </Swiper>

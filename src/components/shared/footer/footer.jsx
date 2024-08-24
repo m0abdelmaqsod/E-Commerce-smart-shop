@@ -61,7 +61,7 @@ const Footer = () => {
 
 
                     <div className={styles.rights}>
-                        <p>جميع حقوق النشر محفوظه لشركه سمارت كود</p>
+                        <p>جميع حقوق النشر محفوظه لشركه سمارت كود </p>
                     </div>
                 </div>
             </footer>

@@ -1,28 +1,35 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "./styles/navbar.module.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { FiShoppingCart, FiHeart } from "react-icons/fi";
 import { BiUser } from "react-icons/bi";
 import { LuSearch } from "react-icons/lu";
 import { CgMenuRight } from "react-icons/cg";
 import NavCart from "./cart/NavCart";
 import User from "./user/User";
-import axios from "axios";
 
 
 
+// ===== Redux ===== //
+import { useSelector } from "react-redux";
 
 
+
+import imgLogo from "../../../../public/images/logo.png";
 
 
 
 const Navbar = () => {
+
+  // ===>>  number quantity cart
+  const totalQuantity = useSelector(state => state.cart.totalQuantity);
+
+
+
   const [isOpen, setIsOpen] = useState(false); /// ===>>  search
   const [isShow, setIsShow] = useState(false); /// ===>>  navCart
   const [isShowUser, setIsShowUser] = useState(false); /// ===>>  user
   const [isOpenToogle, setIsOpenToogle] = useState(false); /// ===>>  toggle nav
-  const [namCar, setNamCar] = useState(0); /// ===>>  nam cerate cart
-  // console.log(setNamCar);
 
   // handler Open And Close Menue search
   const open = () => {
@@ -38,23 +45,11 @@ const Navbar = () => {
   };
 
   // handler Toogle Responsiv
-  const handlerToogleResponsiv = () => {
+  const handlerToogleResponsive = () => {
     setIsOpenToogle((prev) => !prev);
   };
 
-  // const [data, setData] = useState(); /// ===>>  user
-  // useEffect(() => {
-  //   axios
-  //     .get("http://localhost:8000/cart")
-  //     .then((res) => setData(res.data))
-  //     .catch((error) => console.log(error));
-  // }, []);
 
-  // const totalPro = data.length;
-  // console.log(totalPro);
-
-  // const result = axios.get("http://localhost:8000/cart")
-  // console.log(result.data);
 
   return (
     <>
@@ -66,13 +61,12 @@ const Navbar = () => {
               className={styles.namber_cart}
             >
               <FiShoppingCart />
-              <span>{namCar}</span>
+              <span>{totalQuantity}</span>
             </button>
             {isShow && (
               <NavCart
                 show={isShow}
                 setShow={setIsShow}
-                setNamCar={setNamCar}
               />
             )}
 
@@ -181,14 +175,13 @@ const Navbar = () => {
             </ul>
 
             <div className={styles.logo}>
-              <img
-                src="../../../../public/images/logo.png"
-                alt=""
-              />
+              <Link to="/">
+                <img src={imgLogo} alt="" />
+              </Link>
             </div>
 
             <div className={styles.toogle_responsiv}>
-              <button onClick={handlerToogleResponsiv}>
+              <button onClick={handlerToogleResponsive}>
                 <CgMenuRight />
               </button>
             </div>

@@ -1,7 +1,8 @@
-@use '../../../Home/slider/styles/button' as *; 
+@use '../../../Home/slider/styles/button' as *;
 
 .footer {
     background-color: #54A4AF;
+
     .div_footer {
         width: 80%;
         margin: auto;
@@ -31,11 +32,11 @@
 
             ul {
                 display: flex;
-                justify-content: center;
+                justify-content: space-evenly;
+                width: 30%;
+                margin: auto;
 
                 li {
-                    margin: 0 25px 0 0;
-
                     button {
                         @include btn (#fff, 'transparent', 50%, 40px, 40px);
                         font-size: 20px;
@@ -101,7 +102,7 @@
 
 
 
-// Rresponsiv  
+// Responsive
 
 @media (max-width:360px) {
     .footer {
@@ -120,16 +121,14 @@
 
 
             .icons_media {
-                ul {
-                    display: flex;
-                    justify-content: center;
+                margin-top: 20px;
 
-                    li {
-                        margin: 10px 25px 0 0;
-                    }
+                ul {
+                    width: 80%;
                 }
 
                 p {
+                    margin: 15px 0;
                     color: #fff;
                     font-size: 20px;
                     font-weight: bolder;
@@ -153,11 +152,7 @@
 
 
 
-
-
-
-
-@media (min-width:360px) {
+@media (min-width:361px) {
     .footer {
         .div_footer {
             width: 90%;
@@ -174,19 +169,18 @@
 
 
             .icons_media {
-                ul {
-                    display: flex;
-                    justify-content: center;
+                margin: 20px 0;
 
-                    li {
-                        margin: 10px 25px 0 0;
-                    }
+                ul {
+                    width: 70%;
                 }
 
                 p {
                     color: #fff;
                     font-size: 20px;
                     font-weight: bolder;
+                    margin: 15px 0;
+
                 }
             }
 
@@ -201,13 +195,6 @@
         }
     }
 }
-
-
-
-
-
-
-
 
 
 
@@ -227,16 +214,17 @@
                     grid-template-columns: repeat(4, 1fr);
                 }
             }
+
+            .icons_media {
+                margin: 20px 0 15px;
+
+                ul {
+                    width: 40%;
+                }
+            }
         }
     }
 }
-
-
-
-
-
-
-
 
 
 
@@ -267,13 +255,10 @@
             }
 
             .icons_media {
-                ul {
-                    display: flex;
-                    justify-content: center;
+                margin: 20px 0 15px;
 
-                    li {
-                        margin: 0 25px 0 0;
-                    }
+                ul {
+                    width: 30%;
                 }
             }
         }

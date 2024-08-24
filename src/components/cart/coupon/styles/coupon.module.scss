@@ -13,7 +13,8 @@
 
     p {
         color: #888;
-        font-size: 12px;
+        font-size: 14px;
+        margin-bottom: 20px;
     }
 
     form {
@@ -60,11 +61,16 @@
         margin: 10px 0;
         display: flex;
         justify-content: space-between;
+
+        h6 {
+            font-size: 14px;
+        }
     }
 
     .inf {
         color: #000;
         font-weight: 500;
+        margin: 20px 0;
     }
 
     .btn_update_paying {
@@ -112,6 +118,10 @@
     .coupon {
         width: 100%;
 
+        p {
+            font-size: 13px;
+        }
+
         form {
             textarea {
                 height: 20vh;
@@ -128,6 +138,10 @@
 @media (min-width:360px) {
     .coupon {
         width: 100%;
+
+        p {
+            font-size: 13px;
+        }
 
         form {
             textarea {
@@ -151,7 +165,7 @@
         }
 
         p {
-            font-size: 15px;
+            font-size: 14px;
         }
 
         form {
@@ -165,9 +179,8 @@
 
 
 
-@media (min-width:860px) {
-    // .coupon {}
-}
+// @media (min-width:860px) {
+// } 
 
 
 
@@ -178,10 +191,6 @@
 
         h3 {
             font-size: 20px;
-        }
-
-        p {
-            font-size: 13px;
         }
 
         form {
@@ -199,14 +208,6 @@
 @media (min-width:1200px) {
     .coupon {
         width: 70%;
-
-        h3 {
-            font-size: 20px;
-        }
-
-        p {
-            font-size: 12px;
-        }
 
         form {
             textarea {

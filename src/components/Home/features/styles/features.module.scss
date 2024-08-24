@@ -61,8 +61,8 @@
 
 
 
-// Rresponsiv  
-@media (max-width:321px) {
+// Responsive 
+@media (max-width:320px) {
 
     .features {
         margin-top: 10vh;
@@ -71,6 +71,7 @@
             width: 90%;
             display: grid;
             grid-template-columns: 1fr;
+            row-gap: 30px;
 
             .feature {
                 justify-content: end;
@@ -92,6 +93,7 @@
             width: 90%;
             display: grid;
             grid-template-columns: 1fr;
+            row-gap: 30px;
 
             .feature {
                 justify-content: end;

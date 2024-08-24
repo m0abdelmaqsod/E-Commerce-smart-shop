@@ -4,17 +4,28 @@ import styles from '../../styles/singlePro.module.css';
 import { AiTwotoneStar } from "react-icons/ai";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { dataComments } from "../../../../store/products/apiPro";
+
+
+// ===== Redux ===== //
+import { dataComments } from "../../../../redux/store/products/apiPro";
 import { useDispatch, useSelector } from "react-redux";
+
+
+
+import imgUser from "../../../../../public/images/singlePro/Ellipse 190.png";
+
+
 
 
 const ProReviews = () => {
 
-    // const [data, setData] = useState([]);
 
     const dispatch = useDispatch()
     const { commitUser } = useSelector(state => state.product);
+
     const data = [...commitUser]
+
+
     // === handle State comment === //
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -22,6 +33,8 @@ const ProReviews = () => {
     const [title, setTitle] = useState("");
     const [accept, setAccept] = useState(false);
 
+
+    
     // === handle falter comment_length_all === //
     const [comLength, setComLength] = useState(4);
     const [comLen, setComLen] = useState(false);
@@ -192,7 +205,7 @@ const ProReviews = () => {
                                 </div>
                                 <div className={styles.div_img}>
                                     <img
-                                        src="../../../../../public/images/singlePro/Ellipse 190.png"
+                                        src={imgUser}
                                         alt=""
                                     />
                                 </div>

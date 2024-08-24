@@ -4,7 +4,7 @@
 
 
 .singlePro {
-    padding-top: 16vh;
+    padding-top: 11vh;
 
     // === start of header === //
     .header {
@@ -294,6 +294,7 @@
                 }
 
                 .icons_media {
+                    margin: 10px 0;
                     ul {
                         display: flex;
                         justify-content: end;
@@ -584,10 +585,9 @@
 
 
 // Responsive 
-
 @media (max-width:360px) {
     .singlePro {
-        padding-top: 13vh;
+        padding-top: 12vh;
 
         // === start of header === //
         .header {
@@ -609,9 +609,19 @@
 
                 .name_and_link {
                     font-size: 14px;
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    row-gap: 10px;
+
+
+                    span:nth-child(2) {
+                        display: none;
+                    }
 
                     p {
                         margin: 0;
+                        grid-row: 2/3;
+                        grid-column: 1/4;
                     }
                 }
             }
@@ -828,9 +838,9 @@
 
 
 
-@media (min-width:360px) {
+@media (min-width:361px) {
     .singlePro {
-        padding-top: 13vh;
+        padding-top: 12vh;
 
         // === start of header === //
         .header {
@@ -853,9 +863,18 @@
 
                 .name_and_link {
                     font-size: 15px;
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    row-gap: 10px;
+
+                    span:nth-child(2) {
+                        display: none;
+                    }
 
                     p {
                         margin: 0;
+                        grid-row: 2/3;
+                        grid-column: 1/4;
                     }
                 }
             }
@@ -1073,7 +1092,6 @@
 
 @media (min-width:768px) {
     .singlePro {
-        padding-top: 17vh;
 
         // === start of header === //
         .header {
@@ -1095,6 +1113,18 @@
 
                 .name_and_link {
                     font-size: 17px;
+                    // display: grid;
+                    // grid-template-columns: repeat(3, 1fr);
+                    // row-gap: 10px;
+
+                    // span:nth-child(2) {
+                    //     display: none;
+                    // }
+
+                    // p {
+                    //     grid-row: 2/3;
+                    //     grid-column: 1/4;
+                    // }
                 }
             }
         }
@@ -1160,7 +1190,7 @@
 
 @media (min-width:860px) {
     .singlePro {
-        padding-top: 18vh;
+        padding-top: 11vh;
 
         // === start of header === //
         .header {
@@ -1261,9 +1291,8 @@
 
 @media (min-width:1024px) {
     .singlePro {
-        padding-top: 19vh;
 
-        // === start of header === //
+        // === start of header === // 
         .header {
             .title_header {
                 h2 {
@@ -1271,7 +1300,11 @@
                 }
 
                 .name_and_link {
-                    font-size: 20px;
+                    display: flex;
+
+                    span:nth-child(2) {
+                        display: flex;
+                    }
                 }
             }
         }
@@ -1369,7 +1402,6 @@
 
 @media (min-width:1200px) {
     .singlePro {
-        padding-top: 15vh;
 
         // === start of header === //
         .header {

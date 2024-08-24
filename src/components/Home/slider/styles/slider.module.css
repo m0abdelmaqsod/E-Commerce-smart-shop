@@ -25,11 +25,11 @@
   width: 100%;
 }
 .slider .slid .div_slider .img_slider img:nth-child(2) {
-  height: 100%;
-  width: 75%;
+  height: 95%;
+  width: 78%;
 }
 .slider .slid .div_slider .img_slider img:nth-child(3) {
-  height: 89%;
+  height: 90%;
   width: 90%;
   border-radius: 50%;
 }
@@ -129,7 +129,7 @@
 
 @media (max-width: 321px) {
   .slider {
-    padding-top: 12vh;
+    padding-top: 13vh;
   }
   .slider .slid {
     width: 90%;
@@ -272,13 +272,13 @@
 }
 @media (min-width: 1200px) {
   .slider {
-    padding-top: 15vh;
+    padding-top: 11vh;
   }
   .slider .slid {
-    padding: 25px 0 50px;
+    padding: 25px 0 10px;
   }
   .slider .slid .div_slider .img_slider {
-    height: 90vh;
+    height: 85vh;
   }
   .slider .slid .div_slider .desc_slider .div_desc p {
     font-size: 27px;

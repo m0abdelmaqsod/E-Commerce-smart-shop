@@ -1,5 +1,5 @@
 .singlePro {
-  padding-top: 16vh;
+  padding-top: 11vh;
 }
 .singlePro .header {
   position: relative;
@@ -212,6 +212,9 @@
 .singlePro .swiper_single_product .data_swiper .media p {
   font-size: 17px;
   font-weight: 600;
+}
+.singlePro .swiper_single_product .data_swiper .media .icons_media {
+  margin: 10px 0;
 }
 .singlePro .swiper_single_product .data_swiper .media .icons_media ul {
   display: flex;
@@ -437,7 +440,7 @@
 
 @media (max-width: 360px) {
   .singlePro {
-    padding-top: 13vh;
+    padding-top: 12vh;
   }
   .singlePro .header .img_header img {
     height: 25vh;
@@ -453,9 +456,17 @@
   }
   .singlePro .header .title_header .name_and_link {
     font-size: 14px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 10px;
+  }
+  .singlePro .header .title_header .name_and_link span:nth-child(2) {
+    display: none;
   }
   .singlePro .header .title_header .name_and_link p {
     margin: 0;
+    grid-row: 2/3;
+    grid-column: 1/4;
   }
   .singlePro .swiper_single_product {
     width: 95%;
@@ -609,9 +620,9 @@
     margin: 30px 0 0;
   }
 }
-@media (min-width: 360px) {
+@media (min-width: 361px) {
   .singlePro {
-    padding-top: 13vh;
+    padding-top: 12vh;
   }
   .singlePro .header .img_header img {
     height: 25vh;
@@ -627,9 +638,17 @@
   }
   .singlePro .header .title_header .name_and_link {
     font-size: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 10px;
+  }
+  .singlePro .header .title_header .name_and_link span:nth-child(2) {
+    display: none;
   }
   .singlePro .header .title_header .name_and_link p {
     margin: 0;
+    grid-row: 2/3;
+    grid-column: 1/4;
   }
   .singlePro .swiper_single_product {
     width: 95%;
@@ -784,9 +803,6 @@
   }
 }
 @media (min-width: 768px) {
-  .singlePro {
-    padding-top: 17vh;
-  }
   .singlePro .header .img_header img {
     height: auto;
   }
@@ -834,7 +850,7 @@
 }
 @media (min-width: 860px) {
   .singlePro {
-    padding-top: 18vh;
+    padding-top: 11vh;
   }
   .singlePro .header .title_header h2 {
     font-size: 25px;
@@ -888,14 +904,14 @@
   }
 }
 @media (min-width: 1024px) {
-  .singlePro {
-    padding-top: 19vh;
-  }
   .singlePro .header .title_header h2 {
     font-size: 35px;
   }
   .singlePro .header .title_header .name_and_link {
-    font-size: 20px;
+    display: flex;
+  }
+  .singlePro .header .title_header .name_and_link span:nth-child(2) {
+    display: flex;
   }
   .singlePro .swiper_single_product {
     width: 80%;
@@ -954,9 +970,6 @@
   }
 }
 @media (min-width: 1200px) {
-  .singlePro {
-    padding-top: 15vh;
-  }
   .singlePro .header .title_header h2 {
     font-size: 40px;
   }

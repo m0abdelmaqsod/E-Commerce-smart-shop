@@ -27,7 +27,7 @@ const productsSlice = createSlice({
 
         setsliderHome(state, action) {
             state.sliderHeadHome = action.payload
-        }
+        },
     }
 })
 

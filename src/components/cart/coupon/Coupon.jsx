@@ -1,7 +1,17 @@
 import React, { useState } from "react";
 import styles from "./styles/coupon.module.css";
 
+
+import { useSelector } from "react-redux";
+
+
+
+
+
 const Coupon = () => {
+
+  const  totalAmount  = useSelector(state => state.cart.totalAmount)
+
   const [coupon, setCoupon] = useState();
   const [commentCoupon, setCommentCoupon] = useState();
 
@@ -45,12 +55,12 @@ const Coupon = () => {
           ></textarea>
         </form>
         <div className={styles.tootleAll}>
-          <h6>ج.م 6000 </h6>
+          <h6>ج.م {totalAmount} </h6>
           <h6>المجموع الفرعي</h6>
         </div>
 
         <div className={styles.tootleAll}>
-          <h6>6000 ج.م</h6>
+          <h6>{totalAmount} ج.م</h6>
           <h6>المجموع الاجمالي</h6>
         </div>
 
