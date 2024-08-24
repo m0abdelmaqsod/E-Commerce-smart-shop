@@ -22,10 +22,9 @@
 }
 .footer .div_footer .icons_media ul {
   display: flex;
-  justify-content: center;
-}
-.footer .div_footer .icons_media ul li {
-  margin: 0 25px 0 0;
+  justify-content: space-evenly;
+  width: 30%;
+  margin: auto;
 }
 .footer .div_footer .icons_media ul li button {
   background-color: "transparent";
@@ -78,14 +77,14 @@
     row-gap: 3vh;
     padding: 0;
   }
-  .footer .div_footer .icons_media ul {
-    display: flex;
-    justify-content: center;
+  .footer .div_footer .icons_media {
+    margin-top: 20px;
   }
-  .footer .div_footer .icons_media ul li {
-    margin: 10px 25px 0 0;
+  .footer .div_footer .icons_media ul {
+    width: 80%;
   }
   .footer .div_footer .icons_media p {
+    margin: 15px 0;
     color: #fff;
     font-size: 20px;
     font-weight: bolder;
@@ -98,7 +97,7 @@
     color: #fff;
   }
 }
-@media (min-width: 360px) {
+@media (min-width: 361px) {
   .footer .div_footer {
     width: 90%;
     padding-top: 30px;
@@ -109,17 +108,17 @@
     row-gap: 3vh;
     padding: 0;
   }
-  .footer .div_footer .icons_media ul {
-    display: flex;
-    justify-content: center;
+  .footer .div_footer .icons_media {
+    margin: 20px 0;
   }
-  .footer .div_footer .icons_media ul li {
-    margin: 10px 25px 0 0;
+  .footer .div_footer .icons_media ul {
+    width: 70%;
   }
   .footer .div_footer .icons_media p {
     color: #fff;
     font-size: 20px;
     font-weight: bolder;
+    margin: 15px 0;
   }
   .footer .div_footer .rights {
     padding: 15px 0 10px;
@@ -135,6 +134,12 @@
   }
   .footer .div_footer .links ul {
     grid-template-columns: repeat(4, 1fr);
+  }
+  .footer .div_footer .icons_media {
+    margin: 20px 0 15px;
+  }
+  .footer .div_footer .icons_media ul {
+    width: 40%;
   }
 }
 @media (min-width: 860px) {
@@ -152,11 +157,10 @@
   .footer .div_footer .links ul li a {
     font-size: 18px;
   }
-  .footer .div_footer .icons_media ul {
-    display: flex;
-    justify-content: center;
+  .footer .div_footer .icons_media {
+    margin: 20px 0 15px;
   }
-  .footer .div_footer .icons_media ul li {
-    margin: 0 25px 0 0;
+  .footer .div_footer .icons_media ul {
+    width: 30%;
   }
 }/*# sourceMappingURL=footer.module.css.map */

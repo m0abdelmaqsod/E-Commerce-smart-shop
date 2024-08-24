@@ -1,23 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import styles from "./styles/similar_pro.module.css";
 import { AiTwotoneStar, AiFillHeart } from "react-icons/ai";
 import { FiShoppingCart } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import { addCart } from "../../../api";
 import BtnSwiper from "../../Home/categorie_filter/BtnSwiber";
+
+
+// ===== Redux ===== //
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProducts } from "../../../store/products/apiPro";
+import { fetchProducts } from "../../../redux/store/products/apiPro";
+import { cartActions } from "../../../redux/store/shopping-cart/cartSlice";
+
+
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
-// import 'swiper/css/navigation';
-
 
 // import required modules
 import { Navigation } from 'swiper/modules';
+
 
 
 
@@ -102,37 +106,13 @@ const Similar_pro = () => {
                         <button>
                           <AiFillHeart />
                         </button>
-                        <button
-                          onClick={() =>
-                            addCart(
-                              product.productName,
-                              product.price,
-                              product.imageUrl,
-                              product.discountedPrice,
-                              product.categories,
-                              product.trademarks,
-                              product.color,
-                              product.weight
-                            )
-                          } className={styles.addCartResponsive}>
+                        <button onClick={() => dispatch(cartActions.addItem(product))} className={styles.addCartResponsive}>
                           +<span>0</span>
                         </button>
                       </div>
 
                       <div className={styles.btnCart}>
-                        <button
-                          onClick={() =>
-                            addCart(
-                              product.productName,
-                              product.price,
-                              product.imageUrl,
-                              product.discountedPrice,
-                              product.categories,
-                              product.trademarks,
-                              product.color,
-                              product.weight
-                            )
-                          }>اضف الي العربة</button>
+                        <button onClick={() => dispatch(cartActions.addItem(product))}>اضف الي العربة</button>
 
                       </div>
                     </div>

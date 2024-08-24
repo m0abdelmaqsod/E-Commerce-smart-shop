@@ -1,18 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import styles from "./styles/latestPro.module.css";
 import { AiTwotoneStar, AiFillHeart } from "react-icons/ai";
-import { addCart } from "../../../api";
 import { Link } from "react-router-dom";
 
-
+// ===== Redux ===== //
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProducts } from "../../../store/products/apiPro";
-
+import { fetchProducts } from "../../../redux/store/products/apiPro";
+import { cartActions } from "../../../redux/store/shopping-cart/cartSlice";
 
 
 const LatestPro = () => {
-  const [latestData, setLatestData] = useState();
-
 
   const dispatch = useDispatch()
 
@@ -47,40 +44,13 @@ const LatestPro = () => {
                       <button>
                         <AiFillHeart />
                       </button>
-                      <button
-                        onClick={() =>
-                          addCart(
-                            product.productName,
-                            product.price,
-                            product.imageUrl,
-                            product.discountedPrice,
-                            product.categories,
-                            product.trademarks,
-                            product.color,
-                            product.weight
-                          )
-                        }
-                        className={styles.addCartResponsive}
-                      >
+                      <button onClick={() => dispatch(cartActions.addItem(product))} className={styles.addCartResponsive} >
                         +<span>0</span>
                       </button>
                     </div>
 
                     <div className={styles.btnCart}>
-                      <button
-                        onClick={() =>
-                          addCart(
-                            product.productName,
-                            product.price,
-                            product.imageUrl,
-                            product.discountedPrice,
-                            product.categories,
-                            product.trademarks,
-                            product.color,
-                            product.weight
-                          )
-                        }
-                      >
+                      <button onClick={() => dispatch(cartActions.addItem(product))}>
                         اضف الي العربة
                       </button>
                     </div>
@@ -123,8 +93,7 @@ const LatestPro = () => {
                     <button>S</button>
                   </div>
                 </div>
-              ))
-            }
+              ))}
           </div>
         </div>
       </section>

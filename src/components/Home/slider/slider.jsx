@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import SwiperButton from './SwiperButton';
 import styles from './styles/slider.module.css';
 import { Link } from 'react-router-dom';
 
+
+// ===== Redux ===== //
 import { useDispatch, useSelector } from 'react-redux';
+import { sliderHome } from '../../../redux/store/products/apiPro';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -11,19 +14,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-// import 'swiper/css/navigation';
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import { sliderHome } from '../../../store/products/apiPro';
-
-
-// import { slider1 } from '../../../../data';
-// import store from '../../../store/store';
 
 
 const Slider = () => {
-
 
     const dispatch = useDispatch();
 

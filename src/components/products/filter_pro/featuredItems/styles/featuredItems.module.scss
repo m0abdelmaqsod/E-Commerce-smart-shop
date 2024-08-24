@@ -1,0 +1,36 @@
+.name_price {
+    text-align: right;
+
+    a {
+
+        display: flex;
+        justify-content: end;
+        color: #00000099;
+        line-height: 19px;
+        font-weight: 500;
+        font-size: 16px;
+        transition: all 0.5s;
+
+        &:hover {
+            color: #7FD3DF;
+        }
+    }
+
+    p {
+        font-size: 15px;
+        font-weight: 700;
+        color: #00000099;
+        margin-top: 5px;
+    }
+}
+
+.div_img {
+    width: 100%;
+    height: 15vh;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}

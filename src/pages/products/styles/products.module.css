@@ -58,7 +58,7 @@
 
 @media (max-width: 360px) {
   .products {
-    padding-top: 13vh;
+    padding-top: 12vh;
   }
   .products .header .img_header img {
     height: 25vh;
@@ -88,7 +88,7 @@
   .products .product_and_filter_and_navPro .pro_and_nav .div_NavPro .btn_open {
     display: flex;
     position: absolute;
-    top: 5px;
+    top: 10px;
     right: 20px;
   }
   .products .product_and_filter_and_navPro .pro_and_nav .div_NavPro .btn_open button {
@@ -149,9 +149,9 @@
     }
   }
 }
-@media (min-width: 360px) {
+@media (min-width: 361px) {
   .products {
-    padding-top: 13vh;
+    padding-top: 12vh;
   }
   .products .header .img_header img {
     height: 25vh;
@@ -181,7 +181,7 @@
   .products .product_and_filter_and_navPro .pro_and_nav .div_NavPro .btn_open {
     display: flex;
     position: absolute;
-    top: 3px;
+    top: 8px;
     right: 30px;
   }
   .products .product_and_filter_and_navPro .pro_and_nav .div_NavPro .btn_open button {
@@ -244,7 +244,7 @@
 }
 @media (min-width: 768px) {
   .products {
-    padding-top: 17vh;
+    padding-top: 12vh;
   }
   .products .header .img_header img {
     height: auto;
@@ -265,7 +265,7 @@
     width: 90%;
   }
   .products .product_and_filter_and_navPro .pro_and_nav .div_NavPro .btn_open {
-    top: 8px;
+    top: 18px;
     right: 20px;
   }
   .products .product_and_filter_and_navPro .pro_and_nav .div_NavPro .btn_open button {
@@ -303,9 +303,6 @@
   }
 }
 @media (min-width: 860px) {
-  .products {
-    padding-top: 18vh;
-  }
   .products .header .title_header h2 {
     font-size: 25px;
     margin-bottom: 20px;
@@ -348,9 +345,6 @@
   }
 }
 @media (min-width: 1024px) {
-  .products {
-    padding-top: 18vh;
-  }
   .products .header .title_header h2 {
     font-size: 35px;
   }
@@ -400,7 +394,7 @@
 }
 @media (min-width: 1200px) {
   .products {
-    padding-top: 15vh;
+    padding-top: 11vh;
   }
   .products .header .title_header h2 {
     font-size: 40px;

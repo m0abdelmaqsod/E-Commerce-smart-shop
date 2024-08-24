@@ -211,8 +211,7 @@
 
 
 
-// Rresponsiv  
-
+// Responsive
 @media (max-width:360px) {
 
     .NavCart,
@@ -220,17 +219,17 @@
         .carts {
             height: 83.5%;
             margin: 0;
-
+            
             .massageCart {
                 font-size: 18px;
             }
-
+            
             .div_Carts {
                 .desc_and_price {
                     h3 {
                         font-size: 13px;
                         font-weight: 600;
-                        height: 9vh;
+                        height: 11vh;
                     }
 
                     .price_and_Quant {
@@ -274,7 +273,7 @@
 
 
 
-@media (min-width:360px) {
+@media (min-width:361px) {
 
     .NavCart,
     .close_cart {
@@ -291,7 +290,7 @@
                     h3 {
                         font-size: 14px;
                         font-weight: 600;
-                        height: 9vh;
+                        height: 11vh;
                     }
 
                     .price_and_Quant {
@@ -399,10 +398,12 @@
 }
 
 @media (min-width:1024px) {
+
     .NavCart,
     .close_cart {
         .carts {
             height: 82%;
+
             .div_Carts {
                 .desc_and_price {
                     .inc_or_dec_prod {
@@ -419,6 +420,7 @@
 }
 
 @media (min-width:1200px) {
+
     .NavCart,
     .close_cart {
         .carts {
@@ -426,23 +428,23 @@
 
             .div_Carts {
                 padding: 10px 10px 20px;
-    
+
                 .desc_and_price {
                     h3 {
                         font-size: 14px;
-                        height: 8vh;
+                        height: 10vh;
                     }
-    
+
                     .price_and_Quant {
                         h6 {
                             font-size: 14px;
                         }
-    
+
                         p {
                             font-size: 12px;
                         }
                     }
-    
+
                     .inc_or_dec_prod {
                         margin-left: 10px;
                     }

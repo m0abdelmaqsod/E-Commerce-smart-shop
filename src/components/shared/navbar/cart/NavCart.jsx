@@ -1,64 +1,29 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "./styles/navCart.module.css";
 import { Link } from "react-router-dom";
-import axios from "axios";
 
-const NavCart = ({ show, setShow,setNamCar }) => {
-  const [data, setData] = useState([]);
-  const [total, setTotal] = useState();
-  const [totalProCart, setTotalProCart] = useState();
 
-  useEffect(() => {
-    loadCart();
-  }, [data]);
+// ===== Redux ===== //
+import { useDispatch, useSelector } from "react-redux";
+import { cartActions } from "../../../../redux/store/shopping-cart/cartSlice";
 
-  let totalPrice = 0;
-  let totalPro = 0;
 
-  const loadCart = async () => {
-    const result = await axios.get("http://localhost:8000/cart");
-    setData(result.data);
 
-    result.data.map((prices) => {
-      totalPrice += prices.Quant * Number(prices.price);
-      totalPro += prices.Quant;
-    });
-    setTotal(totalPrice.toFixed(0));
-    setNamCar(totalPro);
-  };
-  // console.log(totalPro);
-  // console.log(setNamCar);
 
-  const deletOrder = async (id) => {
-      await axios.delete(`http://localhost:8000/cart/${id}`);
-      loadCart();
-  };
 
-  const incDec = async (qut, ib, c, proName, price, imgUrl) => {
-    if (c === "dec") {
-      if (qut === 1) {
-        qut = 1;
-      } else {
-        qut -= 1;
-      }
-    } else {
-      if (qut === 20) {
-        qut = 20;
-        alert("Quantity Cnnot Exceed 20!");
-        return;
-      } else {
-        qut += 1;
-      }
-    }
-    const order = {
-      productName: proName,
-      price: price,
-      Quant: qut,
-      imageUrl: imgUrl,
-    };
-    await axios.put(`http://localhost:8000/cart/${ib}`, order);
-    loadCart();
-  };
+
+
+const NavCart = ({ show, setShow }) => {
+
+  const dispatch = useDispatch();
+  const dataCart = useSelector(state => state.cart.cartItem);
+  const totalAmount = useSelector(state => state.cart.totalAmount)
+
+
+  const data = [...dataCart]
+
+
+
 
   return (
     <>
@@ -75,45 +40,24 @@ const NavCart = ({ show, setShow,setNamCar }) => {
           ) : (
             data.map((cart, index) => (
               <div className={styles.div_Carts} key={index}>
+
                 <div className={styles.delete_cart}>
-                  <button onClick={() => deletOrder(cart.id)}>X</button>
+                  <button onClick={() => dispatch(cartActions.deleteItem(cart))}>X</button>
                 </div>
+
                 <div className={styles.desc_and_price}>
+
                   <h3>{cart.productName}</h3>
+
                   <div className={styles.price_and_Quant}>
-                    <h6>{cart.price}ج.م</h6>
-                    <p>X{cart.Quant}</p>
+                    <h6>{cart.totalPrice}ج.م</h6>
+                    <p>X{cart.quantity}</p>
                   </div>
+
                   <div className={styles.inc_or_dec_prod}>
-                    <button
-                      onClick={() =>
-                        incDec(
-                          cart.Quant,
-                          cart.id,
-                          "dec",
-                          cart.productName,
-                          cart.price,
-                          cart.imageUrl
-                        )
-                      }
-                    >
-                      -
-                    </button>
-                    <p>{cart.Quant}</p>
-                    <button
-                      onClick={() =>
-                        incDec(
-                          cart.Quant,
-                          cart.id,
-                          "inc",
-                          cart.productName,
-                          cart.price,
-                          cart.imageUrl
-                        )
-                      }
-                    >
-                      +
-                    </button>
+                    <button onClick={() => dispatch(cartActions.removeItem(cart))}>-</button>
+                    <p>{cart.quantity}</p>
+                    <button onClick={() => dispatch(cartActions.addItem(cart))}>+</button>
                   </div>
                 </div>
 
@@ -131,7 +75,7 @@ const NavCart = ({ show, setShow,setNamCar }) => {
           <Link to={"/Cart"} onClick={() => setShow(false)}>
             ادفع
           </Link>
-          <p>المجموع : {total} جنيه </p>
+          <p>المجموع : {totalAmount} جنيه </p>
         </div>
       </div>
     </>

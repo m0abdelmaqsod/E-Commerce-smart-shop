@@ -4,16 +4,30 @@ import { Link, useParams } from "react-router-dom";
 import Similar_pro from "../../components/products/similar_product/Similar_pro";
 import { FaFacebookF } from "react-icons/fa";
 import { AiFillYoutube, AiOutlineWhatsApp, AiOutlineTwitter, AiTwotoneStar, AiFillHeart } from "react-icons/ai";
-import { addCart } from "../../api";
 import ProReviews from "./proInfo/proReviews/ProReviews";
 import AdditionalInfo from "./proInfo/additionalInfo/AdditionalInfo";
 import Description from "./proInfo/description/Description";
+
+// ===== Redux ===== //
 import { useDispatch, useSelector } from "react-redux";
-import { singleProduct } from "../../store/products/apiPro";
+import { singleProduct } from "../../redux/store/products/apiPro";
+import { cartActions } from "../../redux/store/shopping-cart/cartSlice";
+
+
+
+
+import imgPanner from "../../../public/images/paner_pro.png";
+import img1 from "../../../public/images/singlePro/Ellipse 188.png";
+import img2 from "../../../public/images/singlePro/Ellipse 187.png";
+import img3 from "../../../public/images/singlePro/Ellipse 186.png";
+import img4 from "../../../public/images/singlePro/Ellipse 189.png";
+
 
 
 
 const SinglePro = () => {
+
+    const { id } = useParams();
 
     const dispatch = useDispatch();
     const { singlePro } = useSelector(state => state.product);
@@ -27,7 +41,8 @@ const SinglePro = () => {
     const [swiperImg, setSwiperImg] = useState(singlePro.imageUrl);
 
 
-    const { id } = useParams();
+
+
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -39,7 +54,7 @@ const SinglePro = () => {
             {/* === start of header === */}
             <div className={styles.header}>
                 <div className={styles.img_header}>
-                    <img src="../../../public/images/paner_pro.png" alt="" />
+                    <img src={imgPanner} alt="" />
                 </div>
 
                 <div className={styles.title_header}>
@@ -102,28 +117,16 @@ const SinglePro = () => {
 
                         <div className={styles.divColorsImg}>
                             <button>
-                                <img
-                                    src="../../../public/images/singlePro/Ellipse 188.png"
-                                    alt=""
-                                />
+                                <img src={img1} alt="" />
                             </button>
                             <button>
-                                <img
-                                    src="../../../public/images/singlePro/Ellipse 187.png"
-                                    alt=""
-                                />
+                                <img src={img2} alt="" />
                             </button>
                             <button>
-                                <img
-                                    src="../../../public/images/singlePro/Ellipse 186.png"
-                                    alt=""
-                                />
+                                <img src={img3} alt="" />
                             </button>
                             <button>
-                                <img
-                                    src="../../../public/images/singlePro/Ellipse 189.png"
-                                    alt=""
-                                />
+                                <img src={img4} alt="" />
                             </button>
                         </div>
                     </div>
@@ -141,20 +144,7 @@ const SinglePro = () => {
                     {/* start of btn_add_and_numDecInc */}
                     <div className={styles.btn_add_and_numDecInc}>
                         <div className={styles.btn_addCart}>
-                            <button
-                                onClick={() =>
-                                    addCart(
-                                        singlePro.productName,
-                                        singlePro.price,
-                                        singlePro.imageUrl,
-                                        singlePro.discountedPrice,
-                                        singlePro.categories,
-                                        singlePro.trademarks,
-                                        singlePro.color,
-                                        singlePro.weight
-                                    )
-                                }
-                            >
+                            <button onClick={() => dispatch(cartActions.addItem(singlePro))}>
                                 اضف للسلة
                             </button>
                         </div>
@@ -175,21 +165,7 @@ const SinglePro = () => {
 
                     {/* start of */}
                     <div className={styles.btn_buy_now}>
-                        <Link
-                            to={"/Cart"}
-                            onClick={() =>
-                                addCart(
-                                    singlePro.productName,
-                                    singlePro.price,
-                                    singlePro.imageUrl,
-                                    singlePro.discountedPrice,
-                                    singlePro.categories,
-                                    singlePro.trademarks,
-                                    singlePro.color,
-                                    singlePro.weight
-                                )
-                            }
-                        >
+                        <Link to={"/Cart"}>
                             اشتري الان
                         </Link>
                     </div>

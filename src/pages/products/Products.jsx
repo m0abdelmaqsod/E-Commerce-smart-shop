@@ -6,14 +6,24 @@ import Product from "../../components/products/product/Product";
 import Filter_pro from "../../components/products/filter_pro/Filter_pro";
 import Similar_pro from "../../components/products/similar_product/Similar_pro";
 import { CgMenuRight } from "react-icons/cg";
+
+
+// ===== Redux ===== //
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProducts } from "../../store/products/apiPro";
+import { fetchProducts } from "../../redux/store/products/apiPro";
+
+
+
+import imgHeader from "../.././../public/images/paner_pro.png";
+
+
+
 
 const Products = () => {
     // === start title page === //
     document.title = "المنتجات";
 
-    
+
     const dispatch = useDispatch()
     // fetch data all
     const { products } = useSelector(state => state.product)
@@ -109,7 +119,7 @@ const Products = () => {
                 <div className={styles.header}>
                     <div className={styles.img_header}>
                         <img
-                            src="../.././../public/images/paner_pro.png"
+                            src={imgHeader}
                             alt=""
                         />
                     </div>

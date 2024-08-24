@@ -1,9 +1,8 @@
 import axios from "axios";
-import { user } from "../../../data";
-import { slider1 } from "../../../data";
-import { cart } from "../../../data";
-import { Product } from "../../../data";
-import { comments } from "../../../data";
+import { user } from "../../../../data";
+import { slider1 } from "../../../../data";
+import { Product } from "../../../../data";
+import { comments } from "../../../../data";
 import { productAction } from "./porducts";
 
 
@@ -15,7 +14,7 @@ export const fetchProducts = () => {
         try {
             // const response = await axios.get("http://localhost:8000/Product")
             dispatch(productAction.setProducts(Product));
-            
+
         } catch (error) {
             console.log(error);
 
@@ -73,3 +72,6 @@ export const sliderHome = () => {
         }
     }
 }
+
+
+

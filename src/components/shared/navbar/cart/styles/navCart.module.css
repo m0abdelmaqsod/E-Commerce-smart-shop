@@ -181,7 +181,7 @@
   .close_cart .carts .div_Carts .desc_and_price h3 {
     font-size: 13px;
     font-weight: 600;
-    height: 9vh;
+    height: 11vh;
   }
   .NavCart .carts .div_Carts .desc_and_price .price_and_Quant h6,
   .close_cart .carts .div_Carts .desc_and_price .price_and_Quant h6 {
@@ -213,7 +213,7 @@
     width: 85%;
   }
 }
-@media (min-width: 360px) {
+@media (min-width: 361px) {
   .NavCart .carts,
   .close_cart .carts {
     height: 83.5%;
@@ -227,7 +227,7 @@
   .close_cart .carts .div_Carts .desc_and_price h3 {
     font-size: 14px;
     font-weight: 600;
-    height: 9vh;
+    height: 11vh;
   }
   .NavCart .carts .div_Carts .desc_and_price .price_and_Quant h6,
   .close_cart .carts .div_Carts .desc_and_price .price_and_Quant h6 {
@@ -328,7 +328,7 @@
   .NavCart .carts .div_Carts .desc_and_price h3,
   .close_cart .carts .div_Carts .desc_and_price h3 {
     font-size: 14px;
-    height: 8vh;
+    height: 10vh;
   }
   .NavCart .carts .div_Carts .desc_and_price .price_and_Quant h6,
   .close_cart .carts .div_Carts .desc_and_price .price_and_Quant h6 {

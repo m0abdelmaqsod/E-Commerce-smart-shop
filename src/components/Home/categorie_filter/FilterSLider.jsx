@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import BtnSwiper from './BtnSwiber';
 import styles from './styles/filterSlider.module.css';
 import { AiTwotoneStar, AiFillHeart } from 'react-icons/ai';
-import { addCart } from '../../../api';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -18,7 +17,10 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { Pagination } from 'swiper/modules';
-import { fetchProducts } from '../../../store/products/apiPro';
+
+// ===== Redux ===== //
+import { fetchProducts } from '../../../redux/store/products/apiPro';
+import { cartActions } from '../../../redux/store/shopping-cart/cartSlice';
 
 
 
@@ -93,38 +95,13 @@ const FilterSLider = () => {
                                                 <button>
                                                     <AiFillHeart />
                                                 </button>
-                                                <button
-                                                    onClick={() =>
-                                                        addCart(
-                                                            product.productName,
-                                                            product.price,
-                                                            product.imageUrl,
-                                                            product.discountedPrice,
-                                                            product.categories,
-                                                            product.trademarks,
-                                                            product.color,
-                                                            product.weight
-                                                        )
-                                                    } className={styles.addCartResponsive}>
+                                                <button onClick={() => dispatch(cartActions.addItem(product))} className={styles.addCartResponsive}>
                                                     +<span>0</span>
                                                 </button>
                                             </div>
 
                                             <div className={styles.btnCart}>
-                                                <button
-                                                    onClick={() =>
-                                                        addCart(
-                                                            product.productName,
-                                                            product.price,
-                                                            product.imageUrl,
-                                                            product.discountedPrice,
-                                                            product.categories,
-                                                            product.trademarks,
-                                                            product.color,
-                                                            product.weight
-                                                        )
-                                                    }>اضف الي العربة</button>
-
+                                                <button onClick={() => dispatch(cartActions.addItem(product))}>اضف الي العربة</button>
                                             </div>
                                         </div>
 
@@ -181,13 +158,13 @@ const FilterSLider = () => {
                         <div className={styles.div_button_filter}>
                             <button onClick={() => setFilter('all')} className={filter === 'all' ? styles.active : ""}>افتراضي</button>
                             <hr />
-                            <button onClick={() => setFilter('men')} className={filter === 'men' ? styles.active : ""}>رجالي</button>
+                            <button onClick={() => setFilter('clothes')} className={filter === 'clothes' ? styles.active : ""}>ملابس</button>
                             <hr />
-                            <button onClick={() => setFilter('women')} className={filter === 'women' ? styles.active : ""}>حريمي</button>
+                            <button onClick={() => setFilter('electronics')} className={filter === 'electronics' ? styles.active : ""}>الالكترونيات</button>
                             <hr />
-                            <button onClick={() => setFilter('children')} className={filter === 'children' ? styles.active : ""}>اطفال</button>
+                            <button onClick={() => setFilter('shoes')} className={filter === 'shoes' ? styles.active : ""}>الأحذية</button>
                             <hr />
-                            <button onClick={() => setFilter('accessories')} className={filter === 'accessories' ? styles.active : ""}>اكسسوارات</button>
+                            <button onClick={() => setFilter('jewelry')} className={filter === 'jewelry' ? styles.active : ""}>المجوهرات</button>
                         </div>
 
                     </div>

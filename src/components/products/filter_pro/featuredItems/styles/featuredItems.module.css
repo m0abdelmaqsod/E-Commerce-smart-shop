@@ -1,0 +1,32 @@
+.name_price {
+  text-align: right;
+}
+.name_price a {
+  display: flex;
+  justify-content: end;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 19px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.5s;
+}
+.name_price a:hover {
+  color: #7FD3DF;
+}
+.name_price p {
+  font-size: 15px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 5px;
+}
+
+.div_img {
+  width: 100%;
+  height: 15vh;
+}
+.div_img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}/*# sourceMappingURL=featuredItems.module.css.map */

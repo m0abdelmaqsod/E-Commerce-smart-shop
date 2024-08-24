@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from "react";
 import styles from "./styles/filter_pro.module.css";
 import { BiSolidLeftArrow } from "react-icons/bi";
-import axios from "axios";
-import { Link } from "react-router-dom";
+
+// ===== Redux ===== //
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProducts } from "../../../redux/store/products/apiPro";
+import FeaturedItems from "./featuredItems/FeaturedItems";
+
+
 
 const Filter_pro = ({
   setFilCategories,
@@ -14,7 +19,13 @@ const Filter_pro = ({
   filColor,
   trademarks,
 }) => {
-  const [data, setData] = useState([]);
+
+  const dispatch = useDispatch();
+  const { products } = useSelector(state => state.product)
+
+
+  const data = [...products]
+
   // === active default === //
   const [active, setActive] = useState(true);
 
@@ -28,12 +39,8 @@ const Filter_pro = ({
 
 
 
-
   useEffect(() => {
-    axios
-      .get("http://localhost:8000/Product")
-      .then((res) => setData(res.data))
-      .catch((error) => console.log(error));
+    dispatch(fetchProducts())
   }, []);
 
   const featuredItems = data.slice(0, 3)
@@ -58,93 +65,59 @@ const Filter_pro = ({
             </span>
           </h3>
           <div className={styles.div_btn_filterCategories}>
-            <button
-              className={
-                filCategories === "accessories" ? styles.active_Categories : ""
-              }
-              onClick={() => {
-                setActive(false)
-                setFilCategories("accessories")
-              }}
-            >
+            <button className={filCategories === "accessories" ? styles.active_Categories : ""} onClick={() => {
+              setActive(false)
+              setFilCategories("accessories")
+            }} >
               <span>+</span>
               <span>الاكسسوارات</span>
             </button>
 
-            <button
-              className={
-                filCategories === "clothes" ? styles.active_Categories : ""
-              }
-              onClick={() => {
-                setActive(false)
-                setFilCategories("clothes")
-              }}
-            >
+            <button className={filCategories === "clothes" ? styles.active_Categories : ""} onClick={() => {
+              setActive(false)
+              setFilCategories("clothes")
+            }}>
               <span>+</span>
               <span>ملابس</span>
             </button>
 
-            <button
-              className={
-                filCategories === "electronics" ? styles.active_Categories : ""
-              }
-              onClick={() => {
-                setActive(false)
-                setFilCategories("electronics")
-              }}
-            >
+            <button className={filCategories === "electronics" ? styles.active_Categories : ""} onClick={() => {
+              setActive(false)
+              setFilCategories("electronics")
+            }} >
               <span>+</span>
               <span>الالكترونيات</span>
             </button>
 
-            <button
-              className={
-                filCategories === "furniture" ? styles.active_Categories : ""
-              }
-              onClick={() => {
-                setActive(false)
-                setFilCategories("furniture")
-              }}
-            >
+            <button className={filCategories === "furniture" ? styles.active_Categories : ""} onClick={() => {
+              setActive(false)
+              setFilCategories("furniture")
+            }} >
               <span>+</span>
               <span>الاثاث</span>
             </button>
 
-            <button
-              className={
-                filCategories === "shoes" ? styles.active_Categories : ""
-              }
-              onClick={() => {
+            <button className={
+              filCategories === "shoes" ? styles.active_Categories : ""} onClick={() => {
                 setActive(false)
                 setFilCategories("shoes")
-              }}
-            >
+              }} >
               <span> </span>
               <span>الاحزية</span>
             </button>
 
-            <button
-              className={
-                filCategories === "jewelry" ? styles.active_Categories : ""
-              }
-              onClick={() => {
-                setActive(false)
-                setFilCategories("jewelry")
-              }}
-            >
+            <button className={filCategories === "jewelry" ? styles.active_Categories : ""} onClick={() => {
+              setActive(false)
+              setFilCategories("jewelry")
+            }} >
               <span>+</span>
               <span>المجوهرات</span>
             </button>
 
-            <button
-              className={
-                filCategories === "other" ? styles.active_Categories : ""
-              }
-              onClick={() => {
-                setActive(false)
-                setFilCategories("other")
-              }}
-            >
+            <button className={filCategories === "other" ? styles.active_Categories : ""} onClick={() => {
+              setActive(false)
+              setFilCategories("other")
+            }} >
               <span>+</span>
               <span>اخري</span>
             </button>
@@ -175,44 +148,41 @@ const Filter_pro = ({
           </h3>
 
           <div className={styles.sizes}>
-            <button
-              className={filSize === "xl" ? styles.active_size : ""}
-              onClick={() => {
-                setActive(false)
-                setFilSize("xl")
-              }}
-            >
+            <button className={filSize === "xl" ? styles.active_size : ""} onClick={() => {
+              setActive(false)
+              setFilSize("xl")
+            }} >
               XL
             </button>
-            <button
-              className={filSize === "l" ? styles.active_size : ""}
-              onClick={() => {
-                setActive(false)
-                setFilSize("l")
-              }}
-            >
+
+            <button className={filSize === "l" ? styles.active_size : ""} onClick={() => {
+              setActive(false)
+              setFilSize("l")
+            }} >
               L
             </button>
+
             <button
-              className={filSize === "m" ? styles.active_size : ""}
-              onClick={() => {
+              className={filSize === "m" ? styles.active_size : ""} onClick={() => {
                 setActive(false)
                 setFilSize("m")
-              }}
-            >
+              }} >
               M
             </button>
-            <button
-              className={filSize === "s" ? styles.active_size : ""}
-              onClick={() => {
-                setActive(false)
-                setFilSize("s")
-              }}
-            >
+
+            <button className={filSize === "s" ? styles.active_size : ""} onClick={() => {
+              setActive(false)
+              setFilSize("s")
+            }}>
               S
             </button>
           </div>
         </div>
+
+
+
+
+
 
         {/*  === start of color ===  */}
         <div className={styles.div_filter_color}>
@@ -269,6 +239,11 @@ const Filter_pro = ({
           </div>
         </div>
 
+
+
+
+
+
         {/*  === start of trademarks ===  */}
         <div className={styles.div_filter_trademarks}>
           <h3>
@@ -283,30 +258,22 @@ const Filter_pro = ({
             onClick={() => {
               setActive(false)
               setTrademarks("Sony")
-            }}
-          >
+            }}>
             سوني
           </button>
 
-          <button
-            className={trademarks === "Lenovo" ? styles.active_trademarks : ""}
+          <button className={trademarks === "Lenovo" ? styles.active_trademarks : ""}
             onClick={() => {
               setActive(false)
               setTrademarks("Lenovo")
-            }}
-          >
+            }}>
             لينوفو
           </button>
 
-          <button
-            className={
-              trademarks === "Johnson & Handson" ? styles.active_trademarks : ""
-            }
-            onClick={() => {
-              setActive(false)
-              setTrademarks("Johnson & Handson")
-            }}
-          >
+          <button className={trademarks === "Johnson & Handson" ? styles.active_trademarks : ""} onClick={() => {
+            setActive(false)
+            setTrademarks("Johnson & Handson")
+          }}>
             جونسون & هاندسون
           </button>
 
@@ -315,8 +282,7 @@ const Filter_pro = ({
             onClick={() => {
               setActive(false)
               setTrademarks("Apple")
-            }}
-          >
+            }}>
             ابل
           </button>
 
@@ -325,8 +291,7 @@ const Filter_pro = ({
             onClick={() => {
               setActive(false)
               setTrademarks("Google")
-            }}
-          >
+            }}>
             جوجل
           </button>
 
@@ -335,16 +300,19 @@ const Filter_pro = ({
             onClick={() => {
               setActive(false)
               setTrademarks("samsung")
-            }}
-          >
+            }}>
             سامسونج
           </button>
         </div>
 
+
+
+
+
         {/*  === start of featuredItems ===  */}
         <div className={styles.div_filter_featuredItems}>
           <h3>
-            عناصر مميزة{" "}
+            عناصر مميزة {" "}
             <span>
               <BiSolidLeftArrow />
             </span>
@@ -352,16 +320,7 @@ const Filter_pro = ({
 
           {featuredItems.map((product, index) => (
             <div key={index} className={styles.div_featuredItems}>
-              <div className={styles.name_price}>
-                <Link to={`/SinglePro/${product.id}`}>
-                  {product.productName}
-                </Link>
-                <p>{product.price}</p>
-              </div>
-
-              <div className={styles.div_img}>
-                <img src={product.imageUrl} alt="" />
-              </div>
+              <FeaturedItems product={product} />
             </div>
           ))}
         </div>

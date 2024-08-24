@@ -28,13 +28,13 @@
                         width: 100%;
                     }
 
-                    &:nth-child(2) {
-                        height: 100%;
-                        width: 75%;
+                    &:nth-child(2) { 
+                        height: 95%;
+                        width: 78%;
                     }
 
                     &:nth-child(3) {
-                        height: 89%;
+                        height:90%;
                         width: 90%;
                         border-radius: 50%;
 
@@ -174,7 +174,7 @@
 // Responsive  
 @media (max-width:321px) {
     .slider {
-        padding-top: 12vh;
+        padding-top: 13vh;
 
         .slid {
             width: 90%;
@@ -395,20 +395,19 @@
 
 @media (min-width:1200px) {
     .slider {
-        padding-top: 15vh;
+        padding-top: 11vh;
 
         .slid {
-            padding: 25px 0 50px;
+            padding: 25px 0 10px;
 
             .div_slider {
 
 
-                .img_slider {
-                    height: 90vh;
-
+                .img_slider { 
+                    height: 85vh;
                 }
 
-                .desc_slider {
+                .desc_slider { 
                     .div_desc {
                         p {
                             font-size: 27px;

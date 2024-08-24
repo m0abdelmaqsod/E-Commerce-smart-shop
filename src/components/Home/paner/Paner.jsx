@@ -4,6 +4,11 @@ import styles from './styles/paner.module.css'
 
 
 
+import imgPanner1 from "../../../../public/images/paner (2) 1.png";
+import imgPanner2 from "../../../../public/images/paner(1) 1.png";
+
+
+
 const Paner = () => {
     return (
         <>
@@ -20,7 +25,7 @@ const Paner = () => {
                         </div>
 
                         <div className={styles.img_paner}>
-                            <img src="../../../../public/images/paner (2) 1.png" alt="" />
+                            <img src={imgPanner1} alt="" />
                         </div>
                     </div>
 
@@ -37,7 +42,7 @@ const Paner = () => {
                         </div>
 
                         <div className={styles.img_paner}>
-                            <img src="../../../../public/images/paner(1) 1.png" alt="" />
+                            <img src={imgPanner2} alt="" />
                         </div>
                     </div>
                 </div>

@@ -61,8 +61,7 @@
 
                     a {
                         font-weight: 400;
-                        // text-align: center;
-                    }
+                     }
                 }
 
                 .activeNav {
@@ -231,6 +230,7 @@
                     display: block;
                     text-align: center;
                     transition: 0.5s;
+                    box-shadow: 0 5px 5px #283c3d2f;
 
                     li {
                         margin: 0;
@@ -294,7 +294,7 @@
     // === end search === //
 }
 
-@media (min-width:360px) {
+@media (min-width:361px) {
     .navbar {
         padding: 4vh 0 10px 0;
 
@@ -332,11 +332,12 @@
                     display: block;
                     text-align: center;
                     transition: 0.5s;
+                    box-shadow: 0 5px 5px #283c3d2f;
 
                     li {
                         margin: 0;
                         padding: 10px;
-                        border-bottom: 1px solid #93cade18;
+                        border-bottom: 1px solid #97cde525;
                     }
 
                     .activeNav {
@@ -390,100 +391,11 @@
     // === end search === //
 }
 
-@media (min-width:768px) {
-    .navbar {
-        padding: 7vh 0 15px 0;
-
-        .nav {
-            width: 90%;
-            grid-template-columns: repeat(2, 1fr);
-
-            .icons_nav {
-                .namber_cart {
-                    span {
-                        width: 14px;
-                        height: 14px;
-                        font-size: 10px;
-                    }
-                }
-            }
-
-            .pages_and_logo {
-                display: flex;
-                align-items: center;
-
-                .link_pages,
-                .close_link_pages {
-                    overflow: hidden;
-                    padding: 0;
-                    height: 0vh;
-                    background-color: #fff;
-                    position: absolute;
-                    top: 16vh;
-                    left: 0;
-                    width: 100%;
-                    display: block;
-                    text-align: center;
-                    transition: 0.5s;
-
-                    li {
-                        margin: 0;
-                        padding: 10px;
-                        border-bottom: 1px solid #93cade18;
-                    }
-
-                    .activeNav {
-                        color: #7FD3DF;
-                        font-weight: 700;
-                    }
-                }
-
-                .close_link_pages {
-                    height: 54.5vh;
-                }
-
-                .logo {
-                    margin: 0 30px 0 30px;
-                }
-
-                .toogle_responsiv {
-                    display: flex;
-
-                    button {
-                        background-color: transparent;
-                        border: 0;
-                        font-size: 25px;
-                        color: #7FD3DF;
-                    }
-                }
-            }
-        }
-    }
-
-
-    // ===  start of search === //
-    .search,
-    .closeSearch {
-        .que_and_form {
-            width: 80%;
-
-            form {
-                input {
-                    width: 90%;
-                }
-            }
-        }
-    }
-
-    // === end search === //
-}
+// @media (min-width:768px) {}
 
 @media (min-width:860px) {
     .navbar {
-        padding: 7vh 0 15px 0;
-
         .nav {
-            width: 90%;
             grid-template-columns: repeat(3, 1fr);
 
             .pages_and_logo {
@@ -496,6 +408,7 @@
                     top: auto;
                     display: flex;
                     background-color: transparent;
+                    box-shadow: none;
 
                     li {
                         padding: 0px;
@@ -522,8 +435,6 @@
 
 @media (min-width:1024px) {
     .navbar {
-        padding: 8vh 0 15px 0;
-
         .nav {
             width: 80%;
 
@@ -550,24 +461,14 @@
 
 @media (min-width:1200px) {
     .navbar {
-        padding: 5vh 0 15px 0;
-
         .nav {
             .pages_and_logo {
 
                 .link_pages,
                 .close_link_pages {
-                    li {
-                        margin: 0 0 0 15px;
-
-                        a {
-                            font-size: 15px;
-                        }
+                    a {
+                        font-size: 15px;
                     }
-                }
-
-                .logo {
-                    margin: 0 0 0 30px;
                 }
             }
         }

@@ -279,7 +279,7 @@
   }
   .filterSLider .filter .div_filter .div_button_filter {
     grid-template-columns: repeat(5, 1fr);
-    gap: 15px;
+    gap: 10px;
     padding: 0 10px;
   }
   .filterSLider .filter .div_filter .div_button_filter button {

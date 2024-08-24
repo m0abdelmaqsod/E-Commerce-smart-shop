@@ -159,7 +159,7 @@
 
 @media (max-width: 360px) {
   .cart {
-    padding: 13vh 0 0;
+    padding: 12vh 0 0;
   }
   .cart .header .img_header img {
     height: 20vh;
@@ -189,6 +189,7 @@
   }
   .cart .div_cart .cartPro_coupon .cartPro .title {
     grid-template-columns: 18% 18% 18% auto;
+    margin: 10px 0;
   }
   .cart .div_cart .cartPro_coupon .cartPro .title p {
     font-size: 13px;
@@ -252,7 +253,7 @@
 }
 @media (min-width: 360px) {
   .cart {
-    padding: 13vh 0 0;
+    padding: 12vh 0 0;
   }
   .cart .header .img_header img {
     height: 23vh;
@@ -283,6 +284,7 @@
   }
   .cart .div_cart .cartPro_coupon .cartPro .title {
     grid-template-columns: 17.5% 17.5% 17.5% auto;
+    margin: 10px 0;
   }
   .cart .div_cart .cartPro_coupon .cartPro .title p {
     font-size: 13px;
@@ -336,9 +338,6 @@
   }
 }
 @media (min-width: 768px) {
-  .cart {
-    padding: 17vh 0 0;
-  }
   .cart .header .img_header img {
     height: auto;
   }
@@ -411,9 +410,6 @@
   }
 }
 @media (min-width: 860px) {
-  .cart {
-    padding: 17vh 0 0;
-  }
   .cart .header .img_header img {
     height: auto;
   }
@@ -458,9 +454,6 @@
   }
 }
 @media (min-width: 1024px) {
-  .cart {
-    padding: 19vh 0 0;
-  }
   .cart .header .title_header h2 {
     font-size: 35px;
   }
@@ -514,9 +507,6 @@
   }
 }
 @media (min-width: 1200px) {
-  .cart {
-    padding: 15vh 0 0;
-  }
   .cart .header .title_header h2 {
     font-size: 40px;
   }

@@ -1,9 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./styles/product.module.css";
 import { AiTwotoneStar, AiFillHeart } from "react-icons/ai";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
-import { addCart } from "../../../api";
 import { Link } from "react-router-dom";
+
+// ===== Redux ===== //
+import { cartActions } from "../../../redux/store/shopping-cart/cartSlice";
+import { useDispatch } from "react-redux";
+
+
+
+
 
 const Product = ({
   isActive,
@@ -12,6 +19,9 @@ const Product = ({
   currentPage,
   setCurrentPage,
 }) => {
+
+
+ const dispatch = useDispatch()
   const generatedPages = [];
   for (let i = 1; i <= pages; i++) {
     generatedPages.push(i);
@@ -36,40 +46,14 @@ const Product = ({
                   <button>
                     <AiFillHeart />
                   </button>
-                  <button
-                    onClick={() =>
-                      addCart(
-                        product.productName,
-                        product.price,
-                        product.imageUrl,
-                        product.discountedPrice,
-                        product.categories,
-                        product.trademarks,
-                        product.color,
-                        product.weight
-                      )
-                    }
-                    className={styles.addCartResponsive}
+                  <button onClick={() => dispatch(cartActions.addItem(product))} className={styles.addCartResponsive}
                   >
                     +<span>0</span>
                   </button>
                 </div>
 
                 <div className={styles.btnCart}>
-                  <button
-                    onClick={() =>
-                      addCart(
-                        product.productName,
-                        product.price,
-                        product.imageUrl,
-                        product.discountedPrice,
-                        product.categories,
-                        product.trademarks,
-                        product.color,
-                        product.weight
-                      )
-                    }
-                  >
+                  <button onClick={() => dispatch(cartActions.addItem(product))}>
                     اضف الي العربة
                   </button>
                 </div>
